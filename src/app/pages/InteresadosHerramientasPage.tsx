@@ -86,9 +86,78 @@ export default function InteresadosHerramientasPage() {
             </ul>
           </PendingSection>
 
-          {/* 2. Recopilación de Datos — Pendiente */}
-          <PendingSection number="2" title="Recopilación de Datos">
-            <div className="space-y-4">
+          {/* 2. Recopilación de Datos — COMPLETO */}
+          <div className="bg-white border border-gray-200 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+              <FileSpreadsheet className="text-blue-600 flex-shrink-0" size={22} />
+              2. Recopilación de Datos
+            </h3>
+            <p className="text-gray-700 mb-4">
+              Los documentos institucionales del HEVES han sido recopilados y organizados en el siguiente repositorio:
+            </p>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+              <a
+                href="https://drive.google.com/drive/folders/1B618R5qmcnAc9ccCFlncauqO-kYgIhuk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-700 font-semibold hover:text-blue-800 underline flex items-center gap-2"
+              >
+                <FileSpreadsheet size={18} />
+                Repositorio de Documentos Institucionales HEVES
+              </a>
+            </div>
+            <p className="text-gray-700 mb-3 text-sm">Documentos incluidos:</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-600">
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={16} />
+                <span>Aviso de Sinceramiento - ROF.pdf</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={16} />
+                <span>aviso-uti-1-semestre-2026.pdf</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={16} />
+                <span>estado-de-implementacion-de-las-recomendaciones-de-los-inform...</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={16} />
+                <span>mapa-de-procesos-2024.pdf</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={16} />
+                <span>MOP - Manual de Operaciones.pdf.pdf</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={16} />
+                <span>organigrama-heves.png</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={16} />
+                <span>PATA.pdf</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={16} />
+                <span>reporte-de-seguimiento-poi-anual-2025-actualizado-v-02.pdf</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={16} />
+                <span>TUPA.pdf</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={16} />
+                <span>7910340-rd-131-2026-de-heves-parte-01.pdf</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={16} />
+                <span>7910340-rd-131-2026-de-heves-parte-02.pdf</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={16} />
+                <span>7910340-rd-131-2026-de-heves-parte-03.pdf</span>
+              </div>
+            </div>
+            <div className="mt-4 space-y-3">
               <div>
                 <h4 className="font-semibold text-gray-700 mb-2">Cuestionarios y Encuestas</h4>
                 <p className="text-gray-600 text-sm">
@@ -102,7 +171,7 @@ export default function InteresadosHerramientasPage() {
                 </p>
               </div>
             </div>
-          </PendingSection>
+          </div>
 
           {/* 3. Matriz Poder-Interés — COMPLETA */}
           <div className="bg-white border border-gray-200 rounded-lg p-6">

@@ -139,14 +139,14 @@ export default function App() {
           <Route path="/" element={
             <>
               <InicioSection />
-              <OrganizacionSection />
+              {/* <OrganizacionSection /> */}
               <EquipoSection />
             </>
           } />
           <Route path="*" element={
             <>
               <InicioSection />
-              <OrganizacionSection />
+              {/* <OrganizacionSection /> */}
               <EquipoSection />
             </>
           } />

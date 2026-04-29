@@ -1,4 +1,4 @@
-import imgHero from "figma:asset/a6f87b087d9c486c9497c65c30c8805158c1125b.png";
+import imgHero from "../../assets/img/pheves-photo-1.png";
 import imgOrganization from "figma:asset/59a2700c7b5ead8cd4c647bd1453b497f4c7a1c2.png";
 // import imgTeam from "figma:asset/c26a8e10a2c4ea63157b66726cfa29124729d437.png";
 import { Building2, Target, Calendar, DollarSign, Users, Mail } from 'lucide-react';
@@ -10,37 +10,38 @@ export function InicioSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Proyecto Social Hospitalario
+              Mejora de la Gestión de Servicios Informáticos del HEVES
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-8">
-              Mejorando la calidad de vida de pacientes vulnerables a través de una gestión
-              estructurada basada en PMBOK 6ta Edición
+              Implementación de procesos ITIL 4 para la gestión de incidentes y cambios,
+              gestionado bajo el marco PMBOK 6ta Edición
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="bg-blue-600 text-white px-8 py-4 rounded-lg text-center">
-                <div className="text-3xl font-bold">500+</div>
-                <div className="text-sm">Pacientes Atendidos</div>
+                <div className="text-3xl font-bold">Nivel III</div>
+                <div className="text-sm">Hospital Público</div>
               </div>
               <div className="bg-blue-600 text-white px-8 py-4 rounded-lg text-center">
-                <div className="text-3xl font-bold">6</div>
+                <div className="text-3xl font-bold">4</div>
                 <div className="text-sm">Meses de Duración</div>
               </div>
               <div className="bg-blue-600 text-white px-8 py-4 rounded-lg text-center">
-                <div className="text-3xl font-bold">95%</div>
-                <div className="text-sm">Satisfacción</div>
+                <div className="text-3xl font-bold">ITIL 4</div>
+                <div className="text-sm">Buenas Prácticas</div>
               </div>
             </div>
           </div>
           <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
             <img
               src={imgHero}
-              alt="Proyecto Social Hospitalario"
+              alt="Hospital de Emergencias Villa El Salvador"
               className="w-full h-full object-cover"
             />
           </div>
         </div>
 
-        <div className="mt-20 grid md:grid-cols-3 gap-8">
+        <div className="mt-20 grid md:grid-cols-2 gap-8">
+          {/*
           <div className="bg-white p-6 rounded-xl shadow-lg">
             <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
               <Target className="text-blue-600" size={24} />
@@ -51,6 +52,7 @@ export function InicioSection() {
               programas de apoyo integral.
             </p>
           </div>
+          */}
 
           <div className="bg-white p-6 rounded-xl shadow-lg">
             <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
@@ -58,8 +60,9 @@ export function InicioSection() {
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Ubicación</h3>
             <p className="text-gray-700">
-              Hospital Central Comunitario, ubicado en el corazón de la zona urbana con mayor
-              necesidad de servicios sociales.
+              Hospital de Emergencias Villa El Salvador<br />
+              Av. 200 Millas S/N, Villa El Salvador, Lima<br />
+              Inaugurado el 7 de abril de 2016
             </p>
           </div>
 
@@ -69,8 +72,8 @@ export function InicioSection() {
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Período</h3>
             <p className="text-gray-700">
-              Mayo - Octubre 2026<br />
-              Implementación completa en 6 meses con evaluación continua de resultados.
+              Septiembre - Diciembre 2026<br />
+              Implementación de procesos ITIL 4 en la Unidad de TI
             </p>
           </div>
         </div>

@@ -8,7 +8,7 @@ interface NavigationProps {
 export function Navigation({ onToggleSidebar, onScrollTo }: NavigationProps) {
   const menuItems = [
     { id: 'inicio', label: 'Inicio' },
-    { id: 'organizacion', label: 'Organización' },
+    // { id: 'organizacion', label: 'Organización' },
     { id: 'equipo', label: 'Equipo' },
   ];
 
@@ -26,7 +26,7 @@ export function Navigation({ onToggleSidebar, onScrollTo }: NavigationProps) {
 
         {/* Logo/Título */}
         <div className="text-xl md:text-2xl font-bold text-blue-900">
-          Proyecto Social Hospitalario
+          Gestión de Servicios Informáticos HEVES
         </div>
 
         <div className="flex-1" />
