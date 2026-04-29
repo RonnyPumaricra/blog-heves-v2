@@ -1,4 +1,46 @@
-import { Users, ArrowRight, CheckCircle, FileCheck, FileSpreadsheet } from 'lucide-react';
+import { Users, ArrowRight, CheckCircle, FileCheck, FileSpreadsheet, AlertTriangle, Clock } from 'lucide-react';
+
+function PendingSection({ number, title, children, noteText }: {
+  number: string;
+  title: string;
+  children: React.ReactNode;
+  noteText?: string;
+}) {
+  return (
+    <div className="bg-white border-2 border-dashed border-amber-400 rounded-lg overflow-hidden">
+      <div className="bg-amber-50 px-6 py-4 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="bg-amber-500 p-2 rounded-lg">
+            <Clock className="text-white" size={20} />
+          </div>
+          <h3 className="text-xl font-bold text-gray-900">
+            {number}. {title}
+          </h3>
+        </div>
+        <span className="inline-flex items-center gap-1.5 bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1.5 rounded-full">
+          <AlertTriangle size={14} />
+          Pendiente
+        </span>
+      </div>
+
+      <div className="px-6 py-5">
+        <div className="text-gray-600">
+          {children}
+        </div>
+
+        <div className="mt-5 bg-amber-50 border border-amber-200 rounded-lg p-4 flex gap-3">
+          <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
+          <div>
+            <p className="text-sm font-semibold text-amber-800 mb-1">Contenido por completar</p>
+            <p className="text-sm text-amber-700">
+              {noteText || 'Esta sección muestra la estructura genérica según el PMBOK. El contenido específico del proyecto HEVES será añadido conforme se avance en la formulación del proyecto.'}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function InteresadosSalidasPage() {
   return (
@@ -448,127 +490,24 @@ export default function InteresadosSalidasPage() {
             </div>
           </div>
 
-          {/* 2. Matriz Poder-Interés */}
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-              <FileSpreadsheet className="text-purple-600 flex-shrink-0" size={22} />
-              2. Matriz Poder — Interés
-            </h3>
-            <p className="text-gray-700 mb-4">
-              La <strong>Matriz Poder–Interés</strong> clasifica a los interesados según su nivel de autoridad sobre el proyecto (<strong>Poder</strong>) y su grado de involucramiento con los resultados (<strong>Interés</strong>). Esta herramienta permite determinar la estrategia de gestión aplicable a cada grupo de stakeholders, optimizando los esfuerzos de comunicación y participación durante el ciclo de vida del proyecto.
-            </p>
-            <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg mb-6">
-              <p className="text-gray-700 text-sm">
-                <strong>Nota metodológica:</strong><br />
-                <strong>Poder</strong> = capacidad de autoridad, influencia o decisión sobre el proyecto.<br />
-                <strong>Interés</strong> = grado de preocupación, dependencia o involucramiento con los resultados del proyecto.
-              </p>
-            </div>
-
-            {/* Matriz visual 2x2 */}
-            <h4 className="text-lg font-bold text-gray-900 mb-4">
-              Clasificación de Interesados según Poder e Interés
-            </h4>
-
-            <div className="mb-6">
-              {/* Header row with Poder labels */}
-              <div className="flex">
-                <div className="w-24 flex items-center justify-center">
-                  <span className="text-xs font-bold text-gray-500 rotate-0">Poder</span>
-                </div>
-                <div className="flex-1 grid grid-cols-2 gap-1">
-                  <div className="text-center text-xs font-bold text-gray-600 py-1">INTERÉS BAJO</div>
-                  <div className="text-center text-xs font-bold text-gray-600 py-1">INTERÉS ALTO</div>
-                </div>
-              </div>
-
-              {/* ALTO row */}
-              <div className="flex">
-                <div className="w-24 flex items-center justify-center">
-                  <span className="text-xs font-bold text-gray-600">ALTO</span>
-                </div>
-                <div className="flex-1 grid grid-cols-2 gap-1">
-                  <div className="bg-amber-50 border border-amber-300 rounded-lg p-4">
-                    <h5 className="font-bold text-amber-800 text-sm mb-1">MANTENER SATISFECHOS</h5>
-                    <p className="text-xs text-amber-700 mb-2 italic">Alto poder, bajo interés</p>
-                    <ul className="text-xs text-gray-700 space-y-1">
-                      <li>• MINSA</li>
-                      <li>• Liana Díaz Chaña (OCI)</li>
-                      <li>• Eduardo Rojas Lecca (Administración)</li>
-                      <li>• Marco Cumpa Cortez (OPP)</li>
-                    </ul>
-                  </div>
-                  <div className="bg-red-50 border border-red-300 rounded-lg p-4">
-                    <h5 className="font-bold text-red-800 text-sm mb-1">GESTIONAR DE CERCA</h5>
-                    <p className="text-xs text-red-700 mb-2 italic">Alto poder, alto interés — Stakeholders clave</p>
-                    <ul className="text-xs text-gray-700 space-y-1">
-                      <li>• Hugo Rojas Olivera (Director Ejecutivo)</li>
-                      <li>• Luis Almanza Cáceres (Asesor Dirección)</li>
-                      <li>• Paola Llave Escobedo (Jefa UTI)</li>
-                      <li>• Equipo Docente y Estudiantil UNTELS</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {/* BAJO row */}
-              <div className="flex mt-1">
-                <div className="w-24 flex items-center justify-center">
-                  <span className="text-xs font-bold text-gray-600">BAJO</span>
-                </div>
-                <div className="flex-1 grid grid-cols-2 gap-1">
-                  <div className="bg-gray-100 border border-gray-300 rounded-lg p-4">
-                    <h5 className="font-bold text-gray-700 text-sm mb-1">MONITOREAR</h5>
-                    <p className="text-xs text-gray-600 mb-2 italic">Bajo poder, bajo interés</p>
-                    <ul className="text-xs text-gray-700 space-y-1">
-                      <li>• Marcos Vivas (Asesoría Jurídica)</li>
-                      <li>• Shirley Ortiz (Logística)</li>
-                    </ul>
-                  </div>
-                  <div className="bg-blue-50 border border-blue-300 rounded-lg p-4">
-                    <h5 className="font-bold text-blue-800 text-sm mb-1">MANTENER INFORMADOS</h5>
-                    <p className="text-xs text-blue-700 mb-2 italic">Bajo poder, alto interés</p>
-                    <ul className="text-xs text-gray-700 space-y-1">
-                      <li>• Personal Asistencial de Emergencia y UCI</li>
-                      <li>• Personal de Enfermería</li>
-                      <li>• Personal de Apoyo al Diagnóstico y Farmacia</li>
-                      <li>• Personal Médico de Hospitalización</li>
-                      <li>• Jonathan Paredes (Gestión de Calidad)</li>
-                      <li>• René Camilla (Recursos Humanos)</li>
-                      <li>• Giancarlo Jamanca (Ingeniería Clínica)</li>
-                      <li>• Mónica Ávila (Articulación Prestacional)</li>
-                      <li>• Pacientes del HEVES</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 3. Registro de Solicitudes de Cambio */}
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
-              3. Registro de Solicitudes de Cambio
-            </h3>
+          {/* 2. Registro de Solicitudes de Cambio — Pendiente */}
+          <PendingSection number="2" title="Registro de Solicitudes de Cambio">
             <p className="text-gray-700 mb-3">
               El proceso de identificar interesados puede generar solicitudes de cambio al proyecto:
             </p>
-            <ul className="space-y-2 text-gray-700 ml-4">
+            <ul className="space-y-2 text-gray-600 ml-4">
               <li>• Cambios en el alcance basados en necesidades de interesados</li>
               <li>• Ajustes en la estrategia de comunicación</li>
               <li>• Modificaciones en los entregables del proyecto</li>
             </ul>
-          </div>
+          </PendingSection>
 
-          {/* 4. Actualizaciones al Plan para la Dirección del Proyecto */}
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
-              4. Actualizaciones al Plan para la Dirección del Proyecto
-            </h3>
+          {/* 3. Actualizaciones al Plan para la Dirección del Proyecto — Pendiente */}
+          <PendingSection number="3" title="Actualizaciones al Plan para la Dirección del Proyecto">
             <p className="text-gray-700 mb-3">
               Componentes que pueden requerir actualización:
             </p>
-            <ul className="space-y-2 text-gray-700">
+            <ul className="space-y-2 text-gray-600">
               <li className="flex items-start gap-2">
                 <CheckCircle className="text-purple-600 flex-shrink-0 mt-1" size={18} />
                 <span><strong>Plan de Gestión de Requisitos:</strong> Nuevos requisitos identificados por interesados</span>
@@ -586,22 +525,19 @@ export default function InteresadosSalidasPage() {
                 <span><strong>Plan de Involucramiento de los Interesados:</strong> Niveles de participación deseados</span>
               </li>
             </ul>
-          </div>
+          </PendingSection>
 
-          {/* 5. Actualizaciones a los Documentos del Proyecto */}
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
-              5. Actualizaciones a los Documentos del Proyecto
-            </h3>
+          {/* 4. Actualizaciones a los Documentos del Proyecto — Pendiente */}
+          <PendingSection number="4" title="Actualizaciones a los Documentos del Proyecto">
             <p className="text-gray-700 mb-3">
               Documentos que pueden actualizarse incluyen:
             </p>
-            <ul className="space-y-2 text-gray-700 ml-4">
+            <ul className="space-y-2 text-gray-600 ml-4">
               <li>• Registro de supuestos sobre comportamiento de interesados</li>
               <li>• Registro de incidentes relacionados con interesados</li>
               <li>• Registro de riesgos asociados a la gestión de interesados</li>
             </ul>
-          </div>
+          </PendingSection>
         </div>
       </section>
     </div>

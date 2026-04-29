@@ -1,4 +1,46 @@
-import { Users, ArrowRight, CheckCircle, MapPin, Shield, FileText } from 'lucide-react';
+import { Users, ArrowRight, CheckCircle, MapPin, Shield, FileText, AlertTriangle, Clock } from 'lucide-react';
+
+function PendingSection({ number, title, children, noteText }: {
+  number: string;
+  title: string;
+  children: React.ReactNode;
+  noteText?: string;
+}) {
+  return (
+    <div className="bg-white border-2 border-dashed border-amber-400 rounded-lg overflow-hidden">
+      <div className="bg-amber-50 px-6 py-4 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="bg-amber-500 p-2 rounded-lg">
+            <Clock className="text-white" size={20} />
+          </div>
+          <h3 className="text-xl font-bold text-gray-900">
+            {number}. {title}
+          </h3>
+        </div>
+        <span className="inline-flex items-center gap-1.5 bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1.5 rounded-full">
+          <AlertTriangle size={14} />
+          Pendiente
+        </span>
+      </div>
+
+      <div className="px-6 py-5">
+        <div className="text-gray-600">
+          {children}
+        </div>
+
+        <div className="mt-5 bg-amber-50 border border-amber-200 rounded-lg p-4 flex gap-3">
+          <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
+          <div>
+            <p className="text-sm font-semibold text-amber-800 mb-1">Contenido por completar</p>
+            <p className="text-sm text-amber-700">
+              {noteText || 'Esta sección muestra la estructura genérica según el PMBOK. El contenido específico del proyecto HEVES será añadido conforme se avance en la formulación del proyecto.'}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function InteresadosEntradasPage() {
   return (
@@ -31,26 +73,26 @@ export default function InteresadosEntradasPage() {
         </div>
 
         <div className="space-y-6">
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              1. Acta de Constitución del Proyecto
-            </h3>
+          {/* 1. Acta de Constitución — Pendiente */}
+          <PendingSection
+            number="1"
+            title="Acta de Constitución del Proyecto"
+            noteText="Esta sección muestra la estructura genérica según el PMBOK. El contenido específico del proyecto HEVES — incluyendo datos reales del Acta de Constitución — será añadido conforme se avance en la formulación del proyecto."
+          >
             <p className="text-gray-700 mb-3">
               Proporciona información sobre interesados clave, propósito del proyecto y autoridad del director:
             </p>
-            <ul className="space-y-2 text-gray-700 ml-4">
-              <li>• Propósito y justificación del proyecto social hospitalario</li>
+            <ul className="space-y-2 text-gray-600 ml-4">
+              <li>• Propósito y justificación del proyecto</li>
               <li>• Objetivos medibles y criterios de éxito</li>
               <li>• Lista inicial de interesados identificados</li>
               <li>• Director del proyecto y patrocinador principal</li>
             </ul>
-          </div>
+          </PendingSection>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              2. Documentos de Negocio
-            </h3>
-            <ul className="space-y-2 text-gray-700">
+          {/* 2. Documentos de Negocio — Pendiente */}
+          <PendingSection number="2" title="Documentos de Negocio">
+            <ul className="space-y-2 text-gray-600">
               <li className="flex items-start gap-2">
                 <CheckCircle className="text-green-600 flex-shrink-0 mt-1" size={18} />
                 <span><strong>Caso de Negocio:</strong> Identifica interesados que se beneficiarán del proyecto
@@ -62,47 +104,42 @@ export default function InteresadosEntradasPage() {
                 del proyecto social y cuándo.</span>
               </li>
             </ul>
-          </div>
+          </PendingSection>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              3. Plan para la Dirección del Proyecto
-            </h3>
+          {/* 3. Plan para la Dirección del Proyecto — Pendiente */}
+          <PendingSection number="3" title="Plan para la Dirección del Proyecto">
             <p className="text-gray-700 mb-3">
               Componentes relevantes incluyen:
             </p>
-            <ul className="space-y-2 text-gray-700 ml-4">
+            <ul className="space-y-2 text-gray-600 ml-4">
               <li>• Plan de Gestión de las Comunicaciones</li>
               <li>• Plan de Involucramiento de los Interesados</li>
             </ul>
-          </div>
+          </PendingSection>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              4. Documentos del Proyecto
-            </h3>
-            <ul className="space-y-2 text-gray-700 ml-4">
+          {/* 4. Documentos del Proyecto — Pendiente */}
+          <PendingSection number="4" title="Documentos del Proyecto">
+            <ul className="space-y-2 text-gray-600 ml-4">
               <li>• Registro de cambios</li>
               <li>• Registro de incidentes</li>
               <li>• Registro de lecciones aprendidas de proyectos similares</li>
             </ul>
-          </div>
+          </PendingSection>
 
-          <div className="bg-white border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              5. Acuerdos
-            </h3>
+          {/* 5. Acuerdos — Pendiente */}
+          <PendingSection number="5" title="Acuerdos">
             <p className="text-gray-700 mb-3">
               Identifican a los interesados relacionados con contratos y convenios:
             </p>
-            <ul className="space-y-2 text-gray-700 ml-4">
+            <ul className="space-y-2 text-gray-600 ml-4">
               <li>• Organizaciones comunitarias asociadas</li>
               <li>• Proveedores de servicios médicos externos</li>
               <li>• Entidades financiadoras del proyecto</li>
               <li>• Socios estratégicos en la implementación</li>
             </ul>
-          </div>
+          </PendingSection>
 
+          {/* 6. Factores Ambientales — COMPLETO */}
           <div className="bg-white border border-gray-200 rounded-lg p-6">
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               6. Factores Ambientales de la Empresa
@@ -111,7 +148,6 @@ export default function InteresadosEntradasPage() {
               Los factores ambientales de la empresa son condiciones externas o internas que influyen, limitan o dirigen el proceso de identificar a los interesados. Esta sección ha sido enriquecida con datos obtenidos del <strong>Manual de Operaciones del HEVES (MOP 2016)</strong> y el <strong>Mapa de Procesos del HEVES 2024</strong>, que constituyen los documentos institucionales oficiales del hospital.
             </p>
 
-            {/* Cultura, Clima Político y Marco de Gobernanza */}
             <div className="mb-6">
               <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
                 <Shield className="text-blue-600 flex-shrink-0" size={20} />
@@ -168,7 +204,6 @@ export default function InteresadosEntradasPage() {
               </p>
             </div>
 
-            {/* Estándares Gubernamentales */}
             <div className="mb-6">
               <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
                 <FileText className="text-blue-600 flex-shrink-0" size={20} />
@@ -235,7 +270,6 @@ export default function InteresadosEntradasPage() {
               </p>
             </div>
 
-            {/* Distribución Geográfica */}
             <div className="mb-6">
               <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
                 <MapPin className="text-blue-600 flex-shrink-0" size={20} />
@@ -280,6 +314,7 @@ export default function InteresadosEntradasPage() {
             </div>
           </div>
 
+          {/* 7. Activos de los Procesos — COMPLETO */}
           <div className="bg-white border border-gray-200 rounded-lg p-6">
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               7. Activos de los Procesos de la Organización
