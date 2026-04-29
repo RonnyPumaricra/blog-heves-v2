@@ -1,7 +1,7 @@
 import imgHero from "figma:asset/a6f87b087d9c486c9497c65c30c8805158c1125b.png";
 import imgOrganization from "figma:asset/59a2700c7b5ead8cd4c647bd1453b497f4c7a1c2.png";
-import imgTeam from "figma:asset/c26a8e10a2c4ea63157b66726cfa29124729d437.png";
-import { Building2, Target, Calendar, DollarSign, Users, Mail, Phone } from 'lucide-react';
+// import imgTeam from "figma:asset/c26a8e10a2c4ea63157b66726cfa29124729d437.png";
+import { Building2, Target, Calendar, DollarSign, Users, Mail } from 'lucide-react';
 
 export function InicioSection() {
   return (
@@ -246,52 +246,24 @@ export function OrganizacionSection() {
 export function EquipoSection() {
   const teamMembers = [
     {
-      name: 'Dr. Jennifer Lee',
-      role: 'Directora del Proyecto',
-      credentials: 'PMP, MD',
-      responsibilities: 'Gestión general del proyecto, toma de decisiones estratégicas, coordinación con stakeholders',
-      email: 'j.lee@hospitalproject.org',
-      phone: '+1 (555) 123-4501'
+      name: 'Junior Joel Perez Damian',
+      role: 'Organizador',
+      email: '2223010198@untels.edu.pe'
     },
     {
-      name: 'James Chen',
-      role: 'Gerente de Proyecto Senior',
-      credentials: 'PMP, MPH',
-      responsibilities: 'Planificación detallada, monitoreo de cronograma y presupuesto, gestión de riesgos',
-      email: 'j.chen@hospitalproject.org',
-      phone: '+1 (555) 123-4502'
+      name: 'Jorge Rafael Roncal Saravia',
+      role: 'Organizador',
+      email: '2223010033@untels.edu.pe'
     },
     {
-      name: 'Dr. Maria Santos',
-      role: 'Líder Clínico',
-      credentials: 'MD, CAPM',
-      responsibilities: 'Diseño de protocolos de atención, capacitación del personal médico, garantía de calidad clínica',
-      email: 'm.santos@hospitalproject.org',
-      phone: '+1 (555) 123-4503'
+      name: 'Marcelo Samuel Molina Vera',
+      role: 'Organizador',
+      email: '2223010103@untels.edu.pe'
     },
     {
-      name: 'Michael Rodriguez',
-      role: 'Coordinador de Involucramiento Comunitario',
-      credentials: 'MSW, PMP',
-      responsibilities: 'Gestión de interesados, alianzas comunitarias, comunicación con beneficiarios',
-      email: 'm.rodriguez@hospitalproject.org',
-      phone: '+1 (555) 123-4504'
-    },
-    {
-      name: 'Sarah Williams',
-      role: 'Coordinadora de Operaciones',
-      credentials: 'MBA, Six Sigma Black Belt',
-      responsibilities: 'Gestión de recursos, logística, sistemas de información del proyecto',
-      email: 's.williams@hospitalproject.org',
-      phone: '+1 (555) 123-4505'
-    },
-    {
-      name: 'Dr. Emily Thompson',
-      role: 'Especialista en Calidad',
-      credentials: 'MD, MPH',
-      responsibilities: 'Monitoreo de indicadores, evaluación de impacto, mejora continua',
-      email: 'e.thompson@hospitalproject.org',
-      phone: '+1 (555) 123-4506'
+      name: 'Ronny Luis Pumaricra Meneses',
+      role: 'Colaborador',
+      email: '2223010014@untels.edu.pe'
     }
   ];
 
@@ -307,6 +279,7 @@ export function EquipoSection() {
           </p>
         </div>
 
+        {/* Sección "Estructura del Equipo" comentada
         <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
           <div>
             <h3 className="text-3xl font-bold text-gray-900 mb-6">
@@ -346,6 +319,7 @@ export function EquipoSection() {
             />
           </div>
         </div>
+        */}
 
         <div className="space-y-6">
           {teamMembers.map((member, index) => (
@@ -354,7 +328,7 @@ export function EquipoSection() {
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
               <div className="p-6">
-                <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
+                <div className="flex flex-col md:flex-row md:items-center gap-4">
                   <div className="flex items-center gap-4 flex-1">
                     <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center flex-shrink-0">
                       <Users className="text-white" size={28} />
@@ -362,25 +336,14 @@ export function EquipoSection() {
                     <div>
                       <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
                       <p className="text-blue-600 font-semibold">{member.role}</p>
-                      <p className="text-sm text-gray-600">{member.credentials}</p>
                     </div>
                   </div>
-                  <div className="flex flex-col gap-2 text-sm">
-                    <div className="flex items-center gap-2 text-gray-600">
-                      <Mail size={16} className="flex-shrink-0" />
-                      <a href={`mailto:${member.email}`} className="hover:text-blue-600">
-                        {member.email}
-                      </a>
-                    </div>
-                    <div className="flex items-center gap-2 text-gray-600">
-                      <Phone size={16} className="flex-shrink-0" />
-                      <span>{member.phone}</span>
-                    </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <Mail size={16} className="flex-shrink-0" />
+                    <a href={`mailto:${member.email}`} className="hover:text-blue-600">
+                      {member.email}
+                    </a>
                   </div>
-                </div>
-                <div className="border-t border-gray-200 pt-4">
-                  <h4 className="text-sm font-semibold text-gray-700 mb-2">Responsabilidades:</h4>
-                  <p className="text-gray-700">{member.responsibilities}</p>
                 </div>
               </div>
             </div>
