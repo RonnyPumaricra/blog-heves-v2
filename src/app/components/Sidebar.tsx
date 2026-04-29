@@ -17,17 +17,17 @@ export function Sidebar({ isOpen }: SidebarProps) {
   };
 
   const menuItems = [
-    {
-      id: 'acta',
-      title: 'Acta de Constitución del Proyecto',
-      icon: FileText,
-      path: '/acta/entradas',
-      children: [
-        { id: 'acta-entradas', label: 'Entradas', path: '/acta/entradas' },
-        { id: 'acta-contenido', label: 'Contenido del Acta', path: '/acta/contenido' },
-        { id: 'acta-salidas', label: 'Salidas', path: '/acta/salidas' }
-      ]
-    },
+    // {
+    //   id: 'acta',
+    //   title: 'Acta de Constitución del Proyecto',
+    //   icon: FileText,
+    //   path: '/acta/entradas',
+    //   children: [
+    //     { id: 'acta-entradas', label: 'Entradas', path: '/acta/entradas' },
+    //     { id: 'acta-contenido', label: 'Contenido del Acta', path: '/acta/contenido' },
+    //     { id: 'acta-salidas', label: 'Salidas', path: '/acta/salidas' }
+    //   ]
+    // },
     {
       id: 'interesados',
       title: 'Identificar a los Interesados',

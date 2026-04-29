@@ -12,6 +12,7 @@ import InteresadosSalidasPage from './pages/InteresadosSalidasPage';
 
 export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [pendingScrollSection, setPendingScrollSection] = useState<string | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -31,7 +32,38 @@ export default function App() {
     }
   }, [location]);
 
+  useEffect(() => {
+    if (!pendingScrollSection) {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname, pendingScrollSection]);
+
+  useEffect(() => {
+    if (pendingScrollSection && location.pathname === '/') {
+      setTimeout(() => {
+        const element = document.getElementById(pendingScrollSection);
+        if (element) {
+          const offset = 80;
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+        setPendingScrollSection(null);
+      }, 100);
+    }
+  }, [location, pendingScrollSection]);
+
   const handleScrollTo = (sectionId: string) => {
+    if (location.pathname !== '/') {
+      setPendingScrollSection(sectionId);
+      navigate('/');
+      return;
+    }
+
     const element = document.getElementById(sectionId);
     if (element) {
       const offset = 80;
