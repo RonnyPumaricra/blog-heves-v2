@@ -1,5 +1,5 @@
 import { Users, ArrowRight, CheckCircle, AlertTriangle, Clock } from 'lucide-react';
-import { EntradaFactoresAmbientales, EntradaActivosProcesos } from '../components/sections';
+import { EntradaFactoresAmbientalesHEVES, EntradaActivosProcesosHEVES } from '../components/sections';
 
 function PendingSection({ number, title, children, noteText }: {
   number: string;
@@ -121,24 +121,9 @@ export default function PlanParticipacionEntradasPage() {
             </ul>
           </PendingSection>
 
-          <EntradaFactoresAmbientales
-            items={[
-              '• Cultura organizacional del HEVES',
-              '• Estructura de gobierno corporativo',
-              '• Estándares regulatorios del sector salud',
-              '• Infraestructura y canales de comunicación disponibles',
-              '• Normativas gubernamentales aplicables',
-            ]}
-          />
+          <EntradaFactoresAmbientalesHEVES />
 
-          <EntradaActivosProcesos
-            items={[
-              '• Políticas de participación de interesados',
-              '• Plantillas para planes de participación',
-              '• Lecciones aprendidas de proyectos anteriores',
-              '• Historial de relaciones con interesados clave',
-            ]}
-          />
+          <EntradaActivosProcesosHEVES />
         </div>
       </section>
     </div>
