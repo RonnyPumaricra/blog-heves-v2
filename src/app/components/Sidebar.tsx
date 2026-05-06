@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronRight, FileText, Users } from 'lucide-react';
+import { ChevronDown, ChevronRight, FileText, Users, ClipboardList } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 import { useState } from 'react';
 
@@ -7,7 +7,7 @@ interface SidebarProps {
 }
 
 export function Sidebar({ isOpen }: SidebarProps) {
-  const [expandedItems, setExpandedItems] = useState<string[]>(['acta', 'interesados']);
+  const [expandedItems, setExpandedItems] = useState<string[]>(['interesados', 'plan-participacion']);
   const location = useLocation();
 
   const toggleExpanded = (item: string) => {
@@ -37,6 +37,17 @@ export function Sidebar({ isOpen }: SidebarProps) {
         { id: 'interesados-entradas', label: 'Entradas', path: '/interesados/entradas' },
         { id: 'interesados-herramientas', label: 'Herramientas y Técnicas', path: '/interesados/herramientas' },
         { id: 'interesados-salidas', label: 'Salidas', path: '/interesados/salidas' }
+      ]
+    },
+    {
+      id: 'plan-participacion',
+      title: 'Plan de Participación de los Interesados',
+      icon: ClipboardList,
+      path: '/plan-participacion/entradas',
+      children: [
+        { id: 'plan-participacion-entradas', label: 'Entradas', path: '/plan-participacion/entradas' },
+        { id: 'plan-participacion-herramientas', label: 'Herramientas y Técnicas', path: '/plan-participacion/herramientas' },
+        { id: 'plan-participacion-salidas', label: 'Salidas', path: '/plan-participacion/salidas' }
       ]
     }
   ];

@@ -9,6 +9,9 @@ import ActaSalidasPage from './pages/ActaSalidasPage';
 import InteresadosEntradasPage from './pages/InteresadosEntradasPage';
 import InteresadosHerramientasPage from './pages/InteresadosHerramientasPage';
 import InteresadosSalidasPage from './pages/InteresadosSalidasPage';
+import PlanParticipacionEntradasPage from './pages/PlanParticipacionEntradasPage';
+import PlanParticipacionHerramientasPage from './pages/PlanParticipacionHerramientasPage';
+import PlanParticipacionSalidasPage from './pages/PlanParticipacionSalidasPage';
 
 export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -131,8 +134,29 @@ export default function App() {
           } />
           <Route path="/interesados/salidas" element={
             <section className="bg-gray-50 py-12 min-h-screen">
-              <div className="max-w-7xl mx-auto px-6 md:px-12">
+              <div className="max-w-7xl mx-auto px-6 md-px-12">
                 <InteresadosSalidasPage />
+              </div>
+            </section>
+          } />
+          <Route path="/plan-participacion/entradas" element={
+            <section className="bg-gray-50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <PlanParticipacionEntradasPage />
+              </div>
+            </section>
+          } />
+          <Route path="/plan-participacion/herramientas" element={
+            <section className="bg-gray-50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <PlanParticipacionHerramientasPage />
+              </div>
+            </section>
+          } />
+          <Route path="/plan-participacion/salidas" element={
+            <section className="bg-gray-50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <PlanParticipacionSalidasPage />
               </div>
             </section>
           } />

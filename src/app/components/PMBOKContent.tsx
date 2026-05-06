@@ -1,4 +1,4 @@
-import { FileText, ArrowRight, CheckCircle, Settings, FileCheck } from 'lucide-react';
+import { FileText, ArrowRight, CheckCircle, Settings, FileCheck, Users, ClipboardList } from 'lucide-react';
 
 interface PMBOKContentProps {
   section: string;
@@ -11,6 +11,10 @@ export function PMBOKContent({ section }: PMBOKContentProps) {
 
   if (section === 'interesados' || section === 'interesados-entradas' || section === 'interesados-herramientas' || section === 'interesados-salidas') {
     return <IdentificarInteresados section={section} />;
+  }
+
+  if (section === 'plan-participacion' || section === 'plan-participacion-entradas' || section === 'plan-participacion-herramientas' || section === 'plan-participacion-salidas') {
+    return <PlanParticipacionInteresados section={section} />;
   }
 
   return null;
@@ -653,6 +657,319 @@ function IdentificarInteresados({ section }: { section: string }) {
                 <li>• Registro de incidentes relacionados con interesados</li>
                 <li>• Registro de riesgos asociados a la gestión de interesados</li>
               </ul>
+            </div>
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+function PlanParticipacionInteresados({ section }: { section: string }) {
+  return (
+    <div className="max-w-5xl">
+      <div className="mb-8">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="bg-indigo-600 p-3 rounded-lg">
+            <ClipboardList className="text-white" size={28} />
+          </div>
+          <div>
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+              Plan de Participación de los Interesados
+            </h1>
+            <p className="text-gray-600 mt-1">Grupo de Procesos de Planificación</p>
+          </div>
+        </div>
+        <p className="text-lg text-gray-700">
+          Proceso de desarrollar enfoques adecuados para involucrar a los interesados del proyecto
+          de manera efectiva, según sus necesidades, expectativas, intereses y su posible impacto
+          en el proyecto.
+        </p>
+      </div>
+
+      {(section === 'plan-participacion' || section === 'plan-participacion-entradas') && (
+        <section id="plan-participacion-entradas" className="mb-12 scroll-mt-24">
+          <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded-r-lg mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <ArrowRight className="text-green-600" size={24} />
+              Entradas
+            </h2>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                1. Acta de Constitución del Proyecto
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Proporciona información de alto nivel sobre los interesados clave y los requisitos del proyecto:
+              </p>
+              <ul className="space-y-2 text-gray-700 ml-4">
+                <li>• Propósito y justificación del proyecto ITSM</li>
+                <li>• Objetivos medibles y criterios de éxito</li>
+                <li>• Lista inicial de interesados identificados</li>
+                <li>• Requisitos de alto nivel</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                2. Plan para la Dirección del Proyecto
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Componentes relevantes que se utilizan como entrada:
+              </p>
+              <ul className="space-y-2 text-gray-700 ml-4">
+                <li>• <strong>Plan de Gestión de Recursos:</strong> Define cómo se involucrarán los recursos físicos y del equipo</li>
+                <li>• <strong>Plan de Gestión de las Comunicaciones:</strong> Proporciona información sobre cómo se comunicará con los interesados</li>
+                <li>• <strong>Plan de Gestión de Riesgos:</strong> Identifica cómo se involucrarán los interesados según su tolerancia al riesgo</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                3. Documentos del Proyecto
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Documentos del proyecto que se utilizan como entradas:
+              </p>
+              <ul className="space-y-2 text-gray-700 ml-4">
+                <li>• <strong>Registro de Interesados:</strong> Información detallada sobre los interesados identificados</li>
+                <li>• <strong>Registro de Supuestos:</strong> Supuestos que pueden influir en la participación de los interesados</li>
+                <li>• <strong>Registro de Cambios:</strong> Cambios aprobados que pueden afectar la participación</li>
+                <li>• <strong>Registro de Lecciones Aprendidas:</strong> Información de fases anteriores del proyecto</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                4. Acuerdos
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Definen a los interesados externos y sus expectativas:
+              </p>
+              <ul className="space-y-2 text-gray-700 ml-4">
+                <li>• Convenios con organizaciones externas</li>
+                <li>• Contratos con proveedores</li>
+                <li>• Acuerdos de nivel de servicio (SLA)</li>
+                <li>• Compromisos con entidades reguladoras</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                5. Factores Ambientales de la Empresa
+              </h3>
+              <ul className="space-y-2 text-gray-700 ml-4">
+                <li>• Cultura organizacional del HEVES</li>
+                <li>• Estructura de gobierno corporativo</li>
+                <li>• Estándares regulatorios del sector salud</li>
+                <li>• Infraestructura y canales de comunicación disponibles</li>
+                <li>• Normativas gubernamentales aplicables</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                6. Activos de los Procesos de la Organización
+              </h3>
+              <ul className="space-y-2 text-gray-700 ml-4">
+                <li>• Políticas de participación de interesados</li>
+                <li>• Plantillas para planes de participación</li>
+                <li>• Lecciones aprendidas de proyectos anteriores</li>
+                <li>• Historial de relaciones con interesados clave</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {(section === 'plan-participacion' || section === 'plan-participacion-herramientas') && (
+        <section id="plan-participacion-herramientas" className="mb-12 scroll-mt-24">
+          <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <Settings className="text-blue-600" size={24} />
+              Herramientas y Técnicas
+            </h2>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                1. Juicio de Expertos
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Consultar con personas con conocimientos especializados en:
+              </p>
+              <ul className="space-y-2 text-gray-700 ml-4">
+                <li>• Estrategias de participación de interesados en proyectos de TI</li>
+                <li>• Conocimiento del entorno hospitalario y de salud</li>
+                <li>• Gestión del cambio organizacional</li>
+                <li>• Comprensión del contexto político y regulatorio</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                2. Recopilación de Datos
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Técnicas para obtener información relevante sobre los interesados:
+              </p>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Cuestionarios y Encuestas</h4>
+                  <p className="text-gray-700 text-sm">
+                    Recopilar expectativas y necesidades de los interesados de manera sistemática.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Entrevistas</h4>
+                  <p className="text-gray-700 text-sm">
+                    Conversaciones directas con interesados clave para comprender su nivel de participación actual y deseado.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                3. Análisis de Datos
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Evaluar el nivel actual y deseado de participación:
+              </p>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Análisis de Supuestos y Restricciones</h4>
+                  <p className="text-gray-700 text-sm">
+                    Identificar supuestos sobre la disponibilidad y disposición de los interesados.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Análisis de Documentos</h4>
+                  <p className="text-gray-700 text-sm">
+                    Revisar documentación existente para comprender las relaciones con interesados.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                4. Toma de Decisiones
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Técnicas para seleccionar las estrategias de participación más adecuadas:
+              </p>
+              <ul className="space-y-2 text-gray-700 ml-4">
+                <li>• <strong>Priorización:</strong> Determinar qué interesados requieren mayor nivel de involucramiento</li>
+                <li>• <strong>Votación:</strong> Consenso del equipo sobre las estrategias de participación</li>
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                5. Representación de Datos
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Herramientas visuales para planificar la participación:
+              </p>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Mapa Mental</h4>
+                  <p className="text-gray-700 text-sm">
+                    Diagramas de relaciones entre interesados y estrategias de engagement.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Matriz de Evaluación de Participación</h4>
+                  <p className="text-gray-700 text-sm mb-2">
+                    Niveles de participación actual vs. deseado:
+                  </p>
+                  <div className="bg-indigo-50 p-4 rounded-lg">
+                    <div className="grid grid-cols-5 gap-2 text-center text-xs font-semibold">
+                      <div className="bg-white p-2 rounded border border-gray-300">Desconocido</div>
+                      <div className="bg-red-50 p-2 rounded border border-red-300">Reacio</div>
+                      <div className="bg-yellow-50 p-2 rounded border border-yellow-300">Neutral</div>
+                      <div className="bg-green-50 p-2 rounded border border-green-300">Favorable</div>
+                      <div className="bg-blue-50 p-2 rounded border border-blue-300">Líder</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                6. Reuniones
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Sesiones con el equipo del proyecto y expertos para:
+              </p>
+              <ul className="space-y-2 text-gray-700 ml-4">
+                <li>• Definir estrategias de participación para cada interesado clave</li>
+                <li>• Identificar barreras y oportunidades de involucramiento</li>
+                <li>• Establecer cronogramas de comunicación y participación</li>
+                <li>• Asignar responsabilidades para la gestión de interesados</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {(section === 'plan-participacion' || section === 'plan-participacion-salidas') && (
+        <section id="plan-participacion-salidas" className="mb-12 scroll-mt-24">
+          <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-lg mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <FileCheck className="text-purple-600" size={24} />
+              Salidas
+            </h2>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                1. Plan de Participación de los Interesados
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Documento que define las estrategias y acciones para lograr una participación efectiva de los interesados. Incluye:
+              </p>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="text-purple-600 flex-shrink-0 mt-1" size={18} />
+                  <span><strong>Niveles actuales y deseados de participación:</strong> Evaluación del nivel de involucramiento de cada interesado (Desconocido, Reacio, Neutral, Favorable, Líder)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="text-purple-600 flex-shrink-0 mt-1" size={18} />
+                  <span><strong>Estrategias de participación:</strong> Enfoques específicos para involucrar a cada interesado o grupo de interesados</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="text-purple-600 flex-shrink-0 mt-1" size={18} />
+                  <span><strong>Acciones y cronogramas:</strong> Actividades planificadas para alcanzar el nivel deseado de participación</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="text-purple-600 flex-shrink-0 mt-1" size={18} />
+                  <span><strong>Responsabilidades:</strong> Asignación de quién gestionará la participación de cada interesado</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="text-purple-600 flex-shrink-0 mt-1" size={18} />
+                  <span><strong>Requisitos de comunicación:</strong> Frecuencia, formato y canales de comunicación con cada grupo</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="text-purple-600 flex-shrink-0 mt-1" size={18} />
+                  <span><strong>Proceso de actualización:</strong> Cómo se revisará y ajustará el plan a lo largo del proyecto</span>
+                </li>
+              </ul>
+
+              <div className="mt-6 bg-indigo-50 border border-indigo-200 rounded-lg p-4">
+                <p className="text-sm text-indigo-800">
+                  <strong>Matriz de Evaluación de Participación:</strong><br />
+                  Clasifica a los interesados según su nivel de participación actual y deseado en cinco categorías:
+                  <strong> Desconocido, Reacio, Neutral, Favorable y Líder.</strong> El objetivo del plan es
+                  definir las acciones necesarias para mover a cada interesado desde su nivel actual hasta el nivel deseado.
+                </p>
+              </div>
             </div>
           </div>
         </section>
