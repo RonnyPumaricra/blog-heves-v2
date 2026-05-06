@@ -1,4 +1,5 @@
 import { Users, ArrowRight, CheckCircle, AlertTriangle, Clock } from 'lucide-react';
+import { EntradaFactoresAmbientales, EntradaActivosProcesos } from '../components/sections';
 
 function PendingSection({ number, title, children, noteText }: {
   number: string;
@@ -120,24 +121,24 @@ export default function PlanParticipacionEntradasPage() {
             </ul>
           </PendingSection>
 
-          <PendingSection number="5" title="Factores Ambientales de la Empresa">
-            <ul className="space-y-2 text-gray-600 ml-4">
-              <li>• Cultura organizacional del HEVES</li>
-              <li>• Estructura de gobierno corporativo</li>
-              <li>• Estándares regulatorios del sector salud</li>
-              <li>• Infraestructura y canales de comunicación disponibles</li>
-              <li>• Normativas gubernamentales aplicables</li>
-            </ul>
-          </PendingSection>
+          <EntradaFactoresAmbientales
+            items={[
+              '• Cultura organizacional del HEVES',
+              '• Estructura de gobierno corporativo',
+              '• Estándares regulatorios del sector salud',
+              '• Infraestructura y canales de comunicación disponibles',
+              '• Normativas gubernamentales aplicables',
+            ]}
+          />
 
-          <PendingSection number="6" title="Activos de los Procesos de la Organización">
-            <ul className="space-y-2 text-gray-600 ml-4">
-              <li>• Políticas de participación de interesados</li>
-              <li>• Plantillas para planes de participación</li>
-              <li>• Lecciones aprendidas de proyectos anteriores</li>
-              <li>• Historial de relaciones con interesados clave</li>
-            </ul>
-          </PendingSection>
+          <EntradaActivosProcesos
+            items={[
+              '• Políticas de participación de interesados',
+              '• Plantillas para planes de participación',
+              '• Lecciones aprendidas de proyectos anteriores',
+              '• Historial de relaciones con interesados clave',
+            ]}
+          />
         </div>
       </section>
     </div>

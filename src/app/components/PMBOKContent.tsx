@@ -1,4 +1,12 @@
 import { FileText, ArrowRight, CheckCircle, Settings, FileCheck, Users, ClipboardList, FileSpreadsheet } from 'lucide-react';
+import {
+  EntradaFactoresAmbientales,
+  EntradaActivosProcesos,
+  HerramientaJuicioExpertos,
+  HerramientaRecopilacionDatos,
+  HerramientaRepresentacionDatos,
+  HerramientaReuniones,
+} from './sections';
 
 interface PMBOKContentProps {
   section: string;
@@ -376,28 +384,9 @@ function IdentificarInteresados({ section }: { section: string }) {
               </ul>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                6. Factores Ambientales de la Empresa
-              </h3>
-              <ul className="space-y-2 text-gray-700 ml-4">
-                <li>• Cultura y estructura organizacional del hospital</li>
-                <li>• Normativas gubernamentales de salud y asistencia social</li>
-                <li>• Tendencias y expectativas de la comunidad</li>
-                <li>• Base de datos de interesados de proyectos anteriores</li>
-              </ul>
-            </div>
+            <EntradaFactoresAmbientales />
 
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                7. Activos de los Procesos de la Organización
-              </h3>
-              <ul className="space-y-2 text-gray-700 ml-4">
-                <li>• Plantillas de registro de interesados</li>
-                <li>• Lecciones aprendidas de proyectos sociales previos</li>
-                <li>• Registros de interesados de iniciativas similares</li>
-              </ul>
-            </div>
+            <EntradaActivosProcesos />
           </div>
         </section>
       )}
@@ -413,40 +402,9 @@ function IdentificarInteresados({ section }: { section: string }) {
           </div>
 
           <div className="space-y-6">
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                1. Juicio de Expertos
-              </h3>
-              <p className="text-gray-700 mb-3">
-                Consultar con personas con conocimientos especializados en:
-              </p>
-              <ul className="space-y-2 text-gray-700 ml-4">
-                <li>• Gestión de proyectos sociales y hospitalarios</li>
-                <li>• Conocimiento profundo de la comunidad objetivo</li>
-                <li>• Experiencia en stakeholder engagement en salud</li>
-                <li>• Comprensión del entorno político y regulatorio</li>
-              </ul>
-            </div>
+            <HerramientaJuicioExpertos />
 
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                2. Recopilación de Datos
-              </h3>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Cuestionarios y Encuestas</h4>
-                  <p className="text-gray-700 text-sm">
-                    Para recopilar información de un gran número de posibles interesados de manera rápida.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Lluvia de Ideas (Brainstorming)</h4>
-                  <p className="text-gray-700 text-sm">
-                    Sesiones con el equipo del proyecto para identificar todos los posibles interesados.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <HerramientaRecopilacionDatos />
 
             <div className="bg-white border border-gray-200 rounded-lg p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -489,46 +447,9 @@ function IdentificarInteresados({ section }: { section: string }) {
               </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                4. Representación de Datos
-              </h3>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Mapas Mentales</h4>
-                  <p className="text-gray-700 text-sm">
-                    Representación visual de las relaciones entre interesados y el proyecto.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Grillas de Clasificación de Interesados</h4>
-                  <p className="text-gray-700 text-sm mb-2">
-                    Clasificación según múltiples dimensiones:
-                  </p>
-                  <ul className="text-sm text-gray-700 ml-4 space-y-1">
-                    <li>• Nivel de poder / influencia</li>
-                    <li>• Nivel de interés / impacto</li>
-                    <li>• Actitud (partidario, neutral, opositor)</li>
-                    <li>• Urgencia de necesidades</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <HerramientaRepresentacionDatos />
 
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                5. Reuniones
-              </h3>
-              <p className="text-gray-700 mb-3">
-                Reuniones de perfil de interesados con el equipo del proyecto y expertos para:
-              </p>
-              <ul className="space-y-2 text-gray-700 ml-4">
-                <li>• Desarrollar una comprensión común de los interesados clave</li>
-                <li>• Analizar el nivel de participación de cada interesado</li>
-                <li>• Identificar formas de involucrar a cada interesado</li>
-                <li>• Planificar estrategias de comunicación personalizadas</li>
-              </ul>
-            </div>
+            <HerramientaReuniones />
           </div>
         </section>
       )}
@@ -756,30 +677,9 @@ function PlanParticipacionInteresados({ section }: { section: string }) {
               </ul>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                5. Factores Ambientales de la Empresa
-              </h3>
-              <ul className="space-y-2 text-gray-700 ml-4">
-                <li>• Cultura organizacional del HEVES</li>
-                <li>• Estructura de gobierno corporativo</li>
-                <li>• Estándares regulatorios del sector salud</li>
-                <li>• Infraestructura y canales de comunicación disponibles</li>
-                <li>• Normativas gubernamentales aplicables</li>
-              </ul>
-            </div>
+            <EntradaFactoresAmbientales items={['• Cultura organizacional del HEVES', '• Estructura de gobierno corporativo', '• Estándares regulatorios del sector salud', '• Infraestructura y canales de comunicación disponibles', '• Normativas gubernamentales aplicables']} />
 
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                6. Activos de los Procesos de la Organización
-              </h3>
-              <ul className="space-y-2 text-gray-700 ml-4">
-                <li>• Políticas de participación de interesados</li>
-                <li>• Plantillas para planes de participación</li>
-                <li>• Lecciones aprendidas de proyectos anteriores</li>
-                <li>• Historial de relaciones con interesados clave</li>
-              </ul>
-            </div>
+            <EntradaActivosProcesos items={['• Políticas de participación de interesados', '• Plantillas para planes de participación', '• Lecciones aprendidas de proyectos anteriores', '• Historial de relaciones con interesados clave']} />
           </div>
         </section>
       )}
@@ -794,43 +694,9 @@ function PlanParticipacionInteresados({ section }: { section: string }) {
           </div>
 
           <div className="space-y-6">
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                1. Juicio de Expertos
-              </h3>
-              <p className="text-gray-700 mb-3">
-                Consultar con personas con conocimientos especializados en:
-              </p>
-              <ul className="space-y-2 text-gray-700 ml-4">
-                <li>• Estrategias de participación de interesados en proyectos de TI</li>
-                <li>• Conocimiento del entorno hospitalario y de salud</li>
-                <li>• Gestión del cambio organizacional</li>
-                <li>• Comprensión del contexto político y regulatorio</li>
-              </ul>
-            </div>
+            <HerramientaJuicioExpertos title="1. Juicio de Expertos" items={['• Estrategias de participación de interesados en proyectos de TI', '• Conocimiento del entorno hospitalario y de salud', '• Gestión del cambio organizacional', '• Comprensión del contexto político y regulatorio']} />
 
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                2. Recopilación de Datos
-              </h3>
-              <p className="text-gray-700 mb-3">
-                Técnicas para obtener información relevante sobre los interesados:
-              </p>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Cuestionarios y Encuestas</h4>
-                  <p className="text-gray-700 text-sm">
-                    Recopilar expectativas y necesidades de los interesados de manera sistemática.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Entrevistas</h4>
-                  <p className="text-gray-700 text-sm">
-                    Conversaciones directas con interesados clave para comprender su nivel de participación actual y deseado.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <HerramientaRecopilacionDatos title="2. Recopilación de Datos" items={[{ tool: 'Cuestionarios y Encuestas', description: 'Recopilar expectativas y necesidades de los interesados de manera sistemática.' }, { tool: 'Entrevistas', description: 'Conversaciones directas con interesados clave para comprender su nivel de participación actual y deseado.' }]} />
 
             <div className="bg-white border border-gray-200 rounded-lg p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -868,52 +734,9 @@ function PlanParticipacionInteresados({ section }: { section: string }) {
               </ul>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                5. Representación de Datos
-              </h3>
-              <p className="text-gray-700 mb-3">
-                Herramientas visuales para planificar la participación:
-              </p>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Mapa Mental</h4>
-                  <p className="text-gray-700 text-sm">
-                    Diagramas de relaciones entre interesados y estrategias de engagement.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Matriz de Evaluación de Participación</h4>
-                  <p className="text-gray-700 text-sm mb-2">
-                    Niveles de participación actual vs. deseado:
-                  </p>
-                  <div className="bg-indigo-50 p-4 rounded-lg">
-                    <div className="grid grid-cols-5 gap-2 text-center text-xs font-semibold">
-                      <div className="bg-white p-2 rounded border border-gray-300">Desconocido</div>
-                      <div className="bg-red-50 p-2 rounded border border-red-300">Reacio</div>
-                      <div className="bg-yellow-50 p-2 rounded border border-yellow-300">Neutral</div>
-                      <div className="bg-green-50 p-2 rounded border border-green-300">Favorable</div>
-                      <div className="bg-blue-50 p-2 rounded border border-blue-300">Líder</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <HerramientaRepresentacionDatos title="5. Representación de Datos" />
 
-            <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                6. Reuniones
-              </h3>
-              <p className="text-gray-700 mb-3">
-                Sesiones con el equipo del proyecto y expertos para:
-              </p>
-              <ul className="space-y-2 text-gray-700 ml-4">
-                <li>• Definir estrategias de participación para cada interesado clave</li>
-                <li>• Identificar barreras y oportunidades de involucramiento</li>
-                <li>• Establecer cronogramas de comunicación y participación</li>
-                <li>• Asignar responsabilidades para la gestión de interesados</li>
-              </ul>
-            </div>
+            <HerramientaReuniones title="6. Reuniones" items={['• Definir estrategias de participación para cada interesado clave', '• Identificar barreras y oportunidades de involucramiento', '• Establecer cronogramas de comunicación y participación', '• Asignar responsabilidades para la gestión de interesados']} />
           </div>
         </section>
       )}

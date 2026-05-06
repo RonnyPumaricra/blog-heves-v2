@@ -1,4 +1,5 @@
 import { Users, Settings, AlertTriangle, Clock } from 'lucide-react';
+import { HerramientaJuicioExpertos, HerramientaRecopilacionDatos, HerramientaRepresentacionDatos, HerramientaReuniones } from '../components/sections';
 
 function PendingSection({ number, title, children, noteText }: {
   number: string;
@@ -73,27 +74,23 @@ export default function PlanParticipacionHerramientasPage() {
         </div>
 
         <div className="space-y-6">
-          <PendingSection number="1" title="Juicio de Expertos">
-            <p className="text-gray-700 mb-3">
-              Consultar con personas con conocimientos especializados en:
-            </p>
-            <ul className="space-y-2 text-gray-600 ml-4">
-              <li>• Estrategias de participación de interesados en proyectos de TI</li>
-              <li>• Conocimiento del entorno hospitalario y de salud</li>
-              <li>• Gestión del cambio organizacional</li>
-              <li>• Comprensión del contexto político y regulatorio</li>
-            </ul>
-          </PendingSection>
+          <HerramientaJuicioExpertos
+            title="1. Juicio de Expertos"
+            items={[
+              '• Estrategias de participación de interesados en proyectos de TI',
+              '• Conocimiento del entorno hospitalario y de salud',
+              '• Gestión del cambio organizacional',
+              '• Comprensión del contexto político y regulatorio',
+            ]}
+          />
 
-          <PendingSection number="2" title="Recopilación de Datos">
-            <p className="text-gray-700 mb-3">
-              Técnicas para obtener información relevante sobre los interesados:
-            </p>
-            <ul className="space-y-2 text-gray-600 ml-4">
-              <li>• <strong>Cuestionarios y Encuestas:</strong> Recopilar expectativas y necesidades de los interesados</li>
-              <li>• <strong>Entrevistas:</strong> Conversaciones directas con interesados clave para comprender su nivel de participación actual y deseado</li>
-            </ul>
-          </PendingSection>
+          <HerramientaRecopilacionDatos
+            title="2. Recopilación de Datos"
+            items={[
+              { tool: 'Cuestionarios y Encuestas', description: 'Recopilar expectativas y necesidades de los interesados de manera sistemática.' },
+              { tool: 'Entrevistas', description: 'Conversaciones directas con interesados clave para comprender su nivel de participación actual y deseado.' },
+            ]}
+          />
 
           <PendingSection number="3" title="Análisis de Datos">
             <p className="text-gray-700 mb-3">
@@ -115,27 +112,24 @@ export default function PlanParticipacionHerramientasPage() {
             </ul>
           </PendingSection>
 
-          <PendingSection number="5" title="Representación de Datos">
-            <p className="text-gray-700 mb-3">
-              Herramientas visuales para planificar la participación:
-            </p>
-            <ul className="space-y-2 text-gray-600 ml-4">
-              <li>• <strong>Mapa Mental:</strong> Diagramas de relaciones entre interesados y estrategias de engagement</li>
-              <li>• <strong>Matriz de Evaluación de Participación:</strong> Niveles de participación actual vs. deseado (Desconocido, Reacio, Neutral, Favorable, Líder)</li>
-            </ul>
-          </PendingSection>
+          <HerramientaRepresentacionDatos title="5. Representación de Datos">
+            <div className="mt-4 bg-indigo-50 border border-indigo-200 rounded-lg p-4">
+              <p className="text-sm text-indigo-800">
+                <strong>Matriz de Evaluación de Participación:</strong><br />
+                Niveles de participación actual vs. deseado: <strong>Desconocido, Reacio, Neutral, Favorable y Líder.</strong>
+              </p>
+            </div>
+          </HerramientaRepresentacionDatos>
 
-          <PendingSection number="6" title="Reuniones">
-            <p className="text-gray-700 mb-3">
-              Sesiones con el equipo del proyecto y expertos para:
-            </p>
-            <ul className="space-y-2 text-gray-600 ml-4">
-              <li>• Definir estrategias de participación para cada interesado clave</li>
-              <li>• Identificar barreras y oportunidades de involucramiento</li>
-              <li>• Establecer cronogramas de comunicación y participación</li>
-              <li>• Asignar responsabilidades para la gestión de interesados</li>
-            </ul>
-          </PendingSection>
+          <HerramientaReuniones
+            title="6. Reuniones"
+            items={[
+              '• Definir estrategias de participación para cada interesado clave',
+              '• Identificar barreras y oportunidades de involucramiento',
+              '• Establecer cronogramas de comunicación y participación',
+              '• Asignar responsabilidades para la gestión de interesados',
+            ]}
+          />
         </div>
       </section>
     </div>
