@@ -1,4 +1,4 @@
-import { FileText, ArrowRight, CheckCircle, Settings, FileCheck, Users, ClipboardList } from 'lucide-react';
+import { FileText, ArrowRight, CheckCircle, Settings, FileCheck, Users, ClipboardList, FileSpreadsheet } from 'lucide-react';
 
 interface PMBOKContentProps {
   section: string;
@@ -929,46 +929,99 @@ function PlanParticipacionInteresados({ section }: { section: string }) {
 
           <div className="space-y-6">
             <div className="bg-white border border-gray-200 rounded-lg p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                <FileSpreadsheet className="text-purple-600 flex-shrink-0" size={22} />
                 1. Plan de Participación de los Interesados
               </h3>
               <p className="text-gray-700 mb-4">
-                Documento que define las estrategias y acciones para lograr una participación efectiva de los interesados. Incluye:
+                Documento que define las estrategias y acciones para lograr una participación efectiva de los interesados.
+                Incluye niveles actuales y deseados de participación, estrategias de involucramiento, acciones planificadas,
+                responsabilidades, requisitos de comunicación y frecuencia de interacción.
               </p>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="text-purple-600 flex-shrink-0 mt-1" size={18} />
-                  <span><strong>Niveles actuales y deseados de participación:</strong> Evaluación del nivel de involucramiento de cada interesado (Desconocido, Reacio, Neutral, Favorable, Líder)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="text-purple-600 flex-shrink-0 mt-1" size={18} />
-                  <span><strong>Estrategias de participación:</strong> Enfoques específicos para involucrar a cada interesado o grupo de interesados</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="text-purple-600 flex-shrink-0 mt-1" size={18} />
-                  <span><strong>Acciones y cronogramas:</strong> Actividades planificadas para alcanzar el nivel deseado de participación</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="text-purple-600 flex-shrink-0 mt-1" size={18} />
-                  <span><strong>Responsabilidades:</strong> Asignación de quién gestionará la participación de cada interesado</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="text-purple-600 flex-shrink-0 mt-1" size={18} />
-                  <span><strong>Requisitos de comunicación:</strong> Frecuencia, formato y canales de comunicación con cada grupo</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="text-purple-600 flex-shrink-0 mt-1" size={18} />
-                  <span><strong>Proceso de actualización:</strong> Cómo se revisará y ajustará el plan a lo largo del proyecto</span>
-                </li>
-              </ul>
 
-              <div className="mt-6 bg-indigo-50 border border-indigo-200 rounded-lg p-4">
+              <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4 mb-6">
                 <p className="text-sm text-indigo-800">
                   <strong>Matriz de Evaluación de Participación:</strong><br />
                   Clasifica a los interesados según su nivel de participación actual y deseado en cinco categorías:
                   <strong> Desconocido, Reacio, Neutral, Favorable y Líder.</strong> El objetivo del plan es
                   definir las acciones necesarias para mover a cada interesado desde su nivel actual hasta el nivel deseado.
                 </p>
+              </div>
+
+              <h4 className="text-lg font-bold text-gray-900 mb-4">
+                Matriz de Participación de los Interesados — Proyecto ITSM HEVES
+              </h4>
+
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border-collapse">
+                  <thead>
+                    <tr className="bg-gray-800 text-white">
+                      <th className="text-left p-3 border border-gray-300 w-12">N.°</th>
+                      <th className="text-left p-3 border border-gray-300">Interesado / Grupo</th>
+                      <th className="text-left p-3 border border-gray-300">Clasificación</th>
+                      <th className="text-left p-3 border border-gray-300">Nivel actual estimado</th>
+                      <th className="text-left p-3 border border-gray-300">Nivel deseado</th>
+                      <th className="text-left p-3 border border-gray-300">Estrategia de involucramiento</th>
+                      <th className="text-left p-3 border border-gray-300 w-28">Frecuencia</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-gray-700">
+                    <tr className="bg-white"><td className="text-center p-3 border border-gray-300 font-semibold">1</td><td className="p-3 border border-gray-300 font-medium">Director Ejecutivo</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-red-100 text-red-800 border-red-200">Gestionar de cerca</span></td><td className="p-3 border border-gray-300 text-center text-xs">Neutral / Partidario</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Líder</td><td className="p-3 border border-gray-300 text-xs">Reuniones ejecutivas, validación de hitos, gestión de decisiones clave</td><td className="p-3 border border-gray-300 text-xs">Semanal o quincenal</td></tr>
+                    <tr className="bg-gray-50"><td className="text-center p-3 border border-gray-300 font-semibold">2</td><td className="p-3 border border-gray-300 font-medium">Asesor de Dirección Ejecutiva</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-red-100 text-red-800 border-red-200">Gestionar de cerca</span></td><td className="p-3 border border-gray-300 text-center text-xs">Neutral / Partidario</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Partidario</td><td className="p-3 border border-gray-300 text-xs">Coordinación directa, revisión de avances y riesgos</td><td className="p-3 border border-gray-300 text-xs">Semanal</td></tr>
+                    <tr className="bg-white"><td className="text-center p-3 border border-gray-300 font-semibold">3</td><td className="p-3 border border-gray-300 font-medium">Jefa de UTI</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-red-100 text-red-800 border-red-200">Gestionar de cerca</span></td><td className="p-3 border border-gray-300 text-center text-xs">Partidario</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Líder</td><td className="p-3 border border-gray-300 text-xs">Participación activa en decisiones técnicas y funcionales</td><td className="p-3 border border-gray-300 text-xs">Semanal</td></tr>
+                    <tr className="bg-gray-50"><td className="text-center p-3 border border-gray-300 font-semibold">4</td><td className="p-3 border border-gray-300 font-medium">Equipo UNTELS</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-red-100 text-red-800 border-red-200">Gestionar de cerca</span></td><td className="p-3 border border-gray-300 text-center text-xs">Partidario</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Líder</td><td className="p-3 border border-gray-300 text-xs">Reuniones de trabajo, seguimiento técnico y académico</td><td className="p-3 border border-gray-300 text-xs">Semanal</td></tr>
+                    <tr className="bg-white"><td className="text-center p-3 border border-gray-300 font-semibold">5</td><td className="p-3 border border-gray-300 font-medium">MINSA</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-amber-100 text-amber-800 border-amber-200">Mantener satisfecho</span></td><td className="p-3 border border-gray-300 text-center text-xs">Neutral</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Partidario</td><td className="p-3 border border-gray-300 text-xs">Reportes ejecutivos y enfoque en cumplimiento e impacto institucional</td><td className="p-3 border border-gray-300 text-xs">Mensual</td></tr>
+                    <tr className="bg-gray-50"><td className="text-center p-3 border border-gray-300 font-semibold">6</td><td className="p-3 border border-gray-300 font-medium">OCI</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-amber-100 text-amber-800 border-amber-200">Mantener satisfecho</span></td><td className="p-3 border border-gray-300 text-center text-xs">Neutral</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Partidario</td><td className="p-3 border border-gray-300 text-xs">Información sobre control, trazabilidad y riesgos</td><td className="p-3 border border-gray-300 text-xs">Mensual</td></tr>
+                    <tr className="bg-white"><td className="text-center p-3 border border-gray-300 font-semibold">7</td><td className="p-3 border border-gray-300 font-medium">Administración</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-amber-100 text-amber-800 border-amber-200">Mantener satisfecho</span></td><td className="p-3 border border-gray-300 text-center text-xs">Neutral</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Partidario</td><td className="p-3 border border-gray-300 text-xs">Coordinación sobre recursos y necesidades administrativas</td><td className="p-3 border border-gray-300 text-xs">Mensual</td></tr>
+                    <tr className="bg-gray-50"><td className="text-center p-3 border border-gray-300 font-semibold">8</td><td className="p-3 border border-gray-300 font-medium">OPP</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-amber-100 text-amber-800 border-amber-200">Mantener satisfecho</span></td><td className="p-3 border border-gray-300 text-center text-xs">Neutral</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Partidario</td><td className="p-3 border border-gray-300 text-xs">Seguimiento presupuestal y de alineación institucional</td><td className="p-3 border border-gray-300 text-xs">Mensual</td></tr>
+                    <tr className="bg-white"><td className="text-center p-3 border border-gray-300 font-semibold">9</td><td className="p-3 border border-gray-300 font-medium">Personal asistencial y médico</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-blue-100 text-blue-800 border-blue-200">Mantener informado</span></td><td className="p-3 border border-gray-300 text-center text-xs">Neutral / Partidario</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Partidario</td><td className="p-3 border border-gray-300 text-xs">Talleres, sesiones informativas y retroalimentación funcional</td><td className="p-3 border border-gray-300 text-xs">Quincenal</td></tr>
+                    <tr className="bg-gray-50"><td className="text-center p-3 border border-gray-300 font-semibold">10</td><td className="p-3 border border-gray-300 font-medium">Enfermería</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-blue-100 text-blue-800 border-blue-200">Mantener informado</span></td><td className="p-3 border border-gray-300 text-center text-xs">Neutral / Partidario</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Partidario</td><td className="p-3 border border-gray-300 text-xs">Comunicación práctica sobre cambios operativos</td><td className="p-3 border border-gray-300 text-xs">Quincenal</td></tr>
+                    <tr className="bg-white"><td className="text-center p-3 border border-gray-300 font-semibold">11</td><td className="p-3 border border-gray-300 font-medium">Diagnóstico y farmacia</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-blue-100 text-blue-800 border-blue-200">Mantener informado</span></td><td className="p-3 border border-gray-300 text-center text-xs">Neutral</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Partidario</td><td className="p-3 border border-gray-300 text-xs">Información de impacto en procesos y coordinación funcional</td><td className="p-3 border border-gray-300 text-xs">Quincenal</td></tr>
+                    <tr className="bg-gray-50"><td className="text-center p-3 border border-gray-300 font-semibold">12</td><td className="p-3 border border-gray-300 font-medium">Gestión de la Calidad</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-blue-100 text-blue-800 border-blue-200">Mantener informado</span></td><td className="p-3 border border-gray-300 text-center text-xs">Partidario</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Partidario / Líder</td><td className="p-3 border border-gray-300 text-xs">Validación de alineación con calidad y mejora continua</td><td className="p-3 border border-gray-300 text-xs">Quincenal</td></tr>
+                    <tr className="bg-white"><td className="text-center p-3 border border-gray-300 font-semibold">13</td><td className="p-3 border border-gray-300 font-medium">RR.HH. / Oficial de Integridad</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-blue-100 text-blue-800 border-blue-200">Mantener informado</span></td><td className="p-3 border border-gray-300 text-center text-xs">Neutral</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Partidario</td><td className="p-3 border border-gray-300 text-xs">Coordinación sobre gestión del cambio y sensibilización</td><td className="p-3 border border-gray-300 text-xs">Mensual</td></tr>
+                    <tr className="bg-gray-50"><td className="text-center p-3 border border-gray-300 font-semibold">14</td><td className="p-3 border border-gray-300 font-medium">Ingeniería Clínica</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-blue-100 text-blue-800 border-blue-200">Mantener informado</span></td><td className="p-3 border border-gray-300 text-center text-xs">Neutral</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Partidario</td><td className="p-3 border border-gray-300 text-xs">Participación técnica cuando existan integraciones o impactos operativos</td><td className="p-3 border border-gray-300 text-xs">Quincenal</td></tr>
+                    <tr className="bg-white"><td className="text-center p-3 border border-gray-300 font-semibold">15</td><td className="p-3 border border-gray-300 font-medium">Atención al Usuario / Articulación Prestacional</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-blue-100 text-blue-800 border-blue-200">Mantener informado</span></td><td className="p-3 border border-gray-300 text-center text-xs">Neutral</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Partidario</td><td className="p-3 border border-gray-300 text-xs">Comunicación sobre impacto al usuario final y experiencia de servicio</td><td className="p-3 border border-gray-300 text-xs">Quincenal</td></tr>
+                    <tr className="bg-gray-50"><td className="text-center p-3 border border-gray-300 font-semibold">16</td><td className="p-3 border border-gray-300 font-medium">Pacientes</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-blue-100 text-blue-800 border-blue-200">Mantener informado</span></td><td className="p-3 border border-gray-300 text-center text-xs">Neutral</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Partidario</td><td className="p-3 border border-gray-300 text-xs">Comunicación institucional orientada a beneficios del servicio</td><td className="p-3 border border-gray-300 text-xs">Según hitos</td></tr>
+                    <tr className="bg-white"><td className="text-center p-3 border border-gray-300 font-semibold">17</td><td className="p-3 border border-gray-300 font-medium">Asesoría Jurídica</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-gray-100 text-gray-800 border-gray-200">Monitorear</span></td><td className="p-3 border border-gray-300 text-center text-xs">Neutral</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Neutral / Partidario</td><td className="p-3 border border-gray-300 text-xs">Seguimiento puntual ante requerimientos normativos o contractuales</td><td className="p-3 border border-gray-300 text-xs">Según necesidad</td></tr>
+                    <tr className="bg-gray-50"><td className="text-center p-3 border border-gray-300 font-semibold">18</td><td className="p-3 border border-gray-300 font-medium">Logística</td><td className="p-3 border border-gray-300"><span className="inline-block text-xs font-semibold px-2 py-1 rounded-full border bg-gray-100 text-gray-800 border-gray-200">Monitorear</span></td><td className="p-3 border border-gray-300 text-center text-xs">Neutral</td><td className="p-3 border border-gray-300 text-center text-xs font-medium text-indigo-700">Neutral / Partidario</td><td className="p-3 border border-gray-300 text-xs">Coordinación solo cuando existan compras o requerimientos logísticos</td><td className="p-3 border border-gray-300 text-xs">Según necesidad</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="mt-6 space-y-4">
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                  <h5 className="font-semibold text-gray-900 mb-2">Resumen por Categoría de Estrategia</h5>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                      <p className="font-semibold text-red-800 mb-1">Gestionar de cerca (4)</p>
+                      <p className="text-gray-700 text-xs">Director Ejecutivo, Asesor de Dirección Ejecutiva, Jefa de UTI, Equipo UNTELS</p>
+                    </div>
+                    <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
+                      <p className="font-semibold text-amber-800 mb-1">Mantener satisfecho (4)</p>
+                      <p className="text-gray-700 text-xs">MINSA, OCI, Administración, OPP</p>
+                    </div>
+                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                      <p className="font-semibold text-blue-800 mb-1">Mantener informado (8)</p>
+                      <p className="text-gray-700 text-xs">Personal asistencial y médico, Enfermería, Diagnóstico y farmacia, Gestión de la Calidad, RR.HH. / Oficial de Integridad, Ingeniería Clínica, Atención al Usuario, Pacientes</p>
+                    </div>
+                    <div className="bg-gray-100 border border-gray-200 rounded-lg p-3">
+                      <p className="font-semibold text-gray-800 mb-1">Monitorear (2)</p>
+                      <p className="text-gray-700 text-xs">Asesoría Jurídica, Logística</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <h5 className="font-semibold text-green-900 mb-2 flex items-center gap-2">
+                    <CheckCircle className="text-green-700" size={18} />
+                    Objetivo General del Plan
+                  </h5>
+                  <p className="text-sm text-green-800">
+                    Mover a todos los interesados desde su nivel actual de participación hacia al menos un nivel de
+                    <strong> Partidario</strong>, garantizando que los actores clave (Director Ejecutivo, Jefa de UTI y
+                    Equipo UNTELS) alcancen un nivel de <strong>Líder</strong> para impulsar el éxito del proyecto ITSM.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
