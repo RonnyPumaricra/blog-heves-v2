@@ -1,26 +1,16 @@
 import { FileText, ArrowRight, CheckCircle, Settings, FileCheck } from 'lucide-react';
+import { PageTitle } from '../components/sections';
 
 export default function ActaEntradasPage() {
   return (
     <div className="max-w-5xl">
-      <div className="mb-8">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="bg-blue-600 p-3 rounded-lg">
-            <FileText className="text-white" size={28} />
-          </div>
-          <div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Acta de Constitución del Proyecto
-            </h1>
-            <p className="text-gray-600 mt-1">Grupo de Procesos de Inicio</p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-700">
-          El Acta de Constitución del Proyecto es el documento que autoriza formalmente la existencia
-          del proyecto y confiere al director del proyecto la autoridad para asignar los recursos de
-          la organización a las actividades del proyecto.
-        </p>
-      </div>
+      <PageTitle
+        icon={FileText}
+        iconBgColor="bg-blue-600"
+        title="Acta de Constitución del Proyecto"
+        subtitle="Grupo de Procesos de Inicio"
+        description="El Acta de Constitución del Proyecto es el documento que autoriza formalmente la existencia del proyecto y confiere al director del proyecto la autoridad para asignar los recursos de la organización a las actividades del proyecto."
+      />
 
       <section className="mb-12">
         <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded-r-lg mb-6">
