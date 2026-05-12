@@ -63,16 +63,16 @@ export default function InteresadosHerramientasPage() {
         </div>
 
         <div className="space-y-6">
-          <HerramientaJuicioExpertos
-            items={[
-              '• Gestión de proyectos sociales y hospitalarios',
-              '• Conocimiento profundo de la comunidad objetivo',
-              '• Experiencia en stakeholder engagement en salud',
-              '• Comprensión del entorno político y regulatorio',
-            ]}
-          />
+          {/* <HerramientaJuicioExpertos */}
+          {/*   items={[ */}
+          {/*     '• Gestión de proyectos sociales y hospitalarios', */}
+          {/*     '• Conocimiento profundo de la comunidad objetivo', */}
+          {/*     '• Experiencia en stakeholder engagement en salud', */}
+          {/*     '• Comprensión del entorno político y regulatorio', */}
+          {/*   ]} */}
+          {/* /> */}
 
-          <HerramientaRecopilacionDatos>
+          <HerramientaRecopilacionDatos title="1. Recopilación de datos">
             <div className="mb-4">
               <p className="text-gray-700 mb-3 text-sm">
                 Los documentos institucionales del HEVES han sido recopilados y organizados en el siguiente repositorio:
@@ -184,9 +184,9 @@ export default function InteresadosHerramientasPage() {
             </div>
           </div>
 
-          <HerramientaRepresentacionDatos />
+          {/* <HerramientaRepresentacionDatos /> */}
 
-          <HerramientaReuniones />
+          {/* <HerramientaReuniones /> */}
         </div>
       </section>
     </div>

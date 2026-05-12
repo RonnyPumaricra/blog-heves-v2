@@ -36,11 +36,11 @@ export function EntradaFactoresAmbientales({ description, items, children }: Sha
   );
 }
 
-export function EntradaFactoresAmbientalesHEVES() {
+export function EntradaFactoresAmbientalesHEVES({idx}: {idx: number}) {
   return (
     <div className="bg-white border border-gray-200 rounded-lg p-6">
       <h3 className="text-xl font-bold text-gray-900 mb-3">
-        6. Factores Ambientales de la Empresa
+        {idx}. Factores Ambientales de la Empresa
       </h3>
       <p className="text-gray-700 mb-4">
         Los factores ambientales de la empresa son condiciones externas o internas que influyen, limitan o dirigen el proceso de identificar a los interesados. Esta sección ha sido enriquecida con datos obtenidos del <strong>Manual de Operaciones del HEVES (MOP 2016)</strong> y el <strong>Mapa de Procesos del HEVES 2024</strong>, que constituyen los documentos institucionales oficiales del hospital.

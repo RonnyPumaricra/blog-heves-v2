@@ -36,11 +36,11 @@ export function EntradaActivosProcesos({ description, items, children }: SharedS
   );
 }
 
-export function EntradaActivosProcesosHEVES() {
+export function EntradaActivosProcesosHEVES({idx}: {idx: number}) {
   return (
     <div className="bg-white border border-gray-200 rounded-lg p-6">
       <h3 className="text-xl font-bold text-gray-900 mb-3">
-        7. Activos de los Procesos de la Organización
+        {idx}. Activos de los Procesos de la Organización
       </h3>
       <p className="text-gray-700 mb-4">
         El <strong>Mapa de Procesos 2024 del HEVES</strong> contiene la ficha técnica oficial del proceso <strong>PS05 (Gestión de Tecnologías de la Información)</strong>. Esta ficha constituye la <em>plantilla institucional</em> sobre la cual se diseñarán los nuevos subprocesos ITIL. Conocerla en detalle es fundamental para que el modelo TO-BE sea adoptable por el HEVES.

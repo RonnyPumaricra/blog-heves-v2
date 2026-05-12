@@ -63,70 +63,70 @@ export default function InteresadosEntradasPage() {
         </div>
 
         <div className="space-y-6">
-          <PendingSection
-            number="1"
-            title="Acta de Constitución del Proyecto"
-            noteText="Esta sección muestra la estructura genérica según el PMBOK. El contenido específico del proyecto HEVES — incluyendo datos reales del Acta de Constitución — será añadido conforme se avance en la formulación del proyecto."
-          >
-            <p className="text-gray-700 mb-3">
-              Proporciona información sobre interesados clave, propósito del proyecto y autoridad del director:
-            </p>
-            <ul className="space-y-2 text-gray-600 ml-4">
-              <li>• Propósito y justificación del proyecto</li>
-              <li>• Objetivos medibles y criterios de éxito</li>
-              <li>• Lista inicial de interesados identificados</li>
-              <li>• Director del proyecto y patrocinador principal</li>
-            </ul>
-          </PendingSection>
+          {/* <PendingSection */}
+          {/*   number="1" */}
+          {/*   title="Acta de Constitución del Proyecto" */}
+          {/*   noteText="Esta sección muestra la estructura genérica según el PMBOK. El contenido específico del proyecto HEVES — incluyendo datos reales del Acta de Constitución — será añadido conforme se avance en la formulación del proyecto." */}
+          {/* > */}
+          {/*   <p className="text-gray-700 mb-3"> */}
+          {/*     Proporciona información sobre interesados clave, propósito del proyecto y autoridad del director: */}
+          {/*   </p> */}
+          {/*   <ul className="space-y-2 text-gray-600 ml-4"> */}
+          {/*     <li>• Propósito y justificación del proyecto</li> */}
+          {/*     <li>• Objetivos medibles y criterios de éxito</li> */}
+          {/*     <li>• Lista inicial de interesados identificados</li> */}
+          {/*     <li>• Director del proyecto y patrocinador principal</li> */}
+          {/*   </ul> */}
+          {/* </PendingSection> */}
+          {/**/}
+          {/* <PendingSection number="2" title="Documentos de Negocio"> */}
+          {/*   <ul className="space-y-2 text-gray-600"> */}
+          {/*     <li className="flex items-start gap-2"> */}
+          {/*       <CheckCircle className="text-green-600 flex-shrink-0 mt-1" size={18} /> */}
+          {/*       <span><strong>Caso de Negocio:</strong> Identifica interesados que se beneficiarán del proyecto */}
+          {/*       y aquellos que contribuyen a su financiamiento.</span> */}
+          {/*     </li> */}
+          {/*     <li className="flex items-start gap-2"> */}
+          {/*       <CheckCircle className="text-green-600 flex-shrink-0 mt-1" size={18} /> */}
+          {/*       <span><strong>Plan de Gestión de Beneficios:</strong> Detalla quiénes recibirán los beneficios */}
+          {/*       del proyecto social y cuándo.</span> */}
+          {/*     </li> */}
+          {/*   </ul> */}
+          {/* </PendingSection> */}
+          {/**/}
+          {/* <PendingSection number="3" title="Plan para la Dirección del Proyecto"> */}
+          {/*   <p className="text-gray-700 mb-3"> */}
+          {/*     Componentes relevantes incluyen: */}
+          {/*   </p> */}
+          {/*   <ul className="space-y-2 text-gray-600 ml-4"> */}
+          {/*     <li>• Plan de Gestión de las Comunicaciones</li> */}
+          {/*     <li>• Plan de Involucramiento de los Interesados</li> */}
+          {/*   </ul> */}
+          {/* </PendingSection> */}
+          {/**/}
+          {/* <PendingSection number="4" title="Documentos del Proyecto"> */}
+          {/*   <ul className="space-y-2 text-gray-600 ml-4"> */}
+          {/*     <li>• Registro de cambios</li> */}
+          {/*     <li>• Registro de incidentes</li> */}
+          {/*     <li>• Registro de lecciones aprendidas de proyectos similares</li> */}
+          {/*   </ul> */}
+          {/* </PendingSection> */}
+          {/**/}
+          {/* <PendingSection number="5" title="Acuerdos"> */}
+          {/*   <p className="text-gray-700 mb-3"> */}
+          {/*     Identifican a los interesados relacionados con contratos y convenios: */}
+          {/*   </p> */}
+          {/*   <ul className="space-y-2 text-gray-600 ml-4"> */}
+          {/*     <li>• Organizaciones comunitarias asociadas</li> */}
+          {/*     <li>• Proveedores de servicios médicos externos</li> */}
+          {/*     <li>• Entidades financiadoras del proyecto</li> */}
+          {/*     <li>• Socios estratégicos en la implementación</li> */}
+          {/*   </ul> */}
+          {/* </PendingSection> */}
 
-          <PendingSection number="2" title="Documentos de Negocio">
-            <ul className="space-y-2 text-gray-600">
-              <li className="flex items-start gap-2">
-                <CheckCircle className="text-green-600 flex-shrink-0 mt-1" size={18} />
-                <span><strong>Caso de Negocio:</strong> Identifica interesados que se beneficiarán del proyecto
-                y aquellos que contribuyen a su financiamiento.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="text-green-600 flex-shrink-0 mt-1" size={18} />
-                <span><strong>Plan de Gestión de Beneficios:</strong> Detalla quiénes recibirán los beneficios
-                del proyecto social y cuándo.</span>
-              </li>
-            </ul>
-          </PendingSection>
+          <EntradaFactoresAmbientalesHEVES idx={1} />
 
-          <PendingSection number="3" title="Plan para la Dirección del Proyecto">
-            <p className="text-gray-700 mb-3">
-              Componentes relevantes incluyen:
-            </p>
-            <ul className="space-y-2 text-gray-600 ml-4">
-              <li>• Plan de Gestión de las Comunicaciones</li>
-              <li>• Plan de Involucramiento de los Interesados</li>
-            </ul>
-          </PendingSection>
-
-          <PendingSection number="4" title="Documentos del Proyecto">
-            <ul className="space-y-2 text-gray-600 ml-4">
-              <li>• Registro de cambios</li>
-              <li>• Registro de incidentes</li>
-              <li>• Registro de lecciones aprendidas de proyectos similares</li>
-            </ul>
-          </PendingSection>
-
-          <PendingSection number="5" title="Acuerdos">
-            <p className="text-gray-700 mb-3">
-              Identifican a los interesados relacionados con contratos y convenios:
-            </p>
-            <ul className="space-y-2 text-gray-600 ml-4">
-              <li>• Organizaciones comunitarias asociadas</li>
-              <li>• Proveedores de servicios médicos externos</li>
-              <li>• Entidades financiadoras del proyecto</li>
-              <li>• Socios estratégicos en la implementación</li>
-            </ul>
-          </PendingSection>
-
-          <EntradaFactoresAmbientalesHEVES />
-
-          <EntradaActivosProcesosHEVES />
+          <EntradaActivosProcesosHEVES idx={2}/>
         </div>
       </section>
     </div>
