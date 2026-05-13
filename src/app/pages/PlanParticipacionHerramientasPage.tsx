@@ -1,47 +1,5 @@
-import { Users, Settings, AlertTriangle, Clock } from 'lucide-react';
-import { PageTitle, HerramientaJuicioExpertos, HerramientaRecopilacionDatos, HerramientaRepresentacionDatos, HerramientaReuniones } from '../components/sections';
-
-function PendingSection({ number, title, children, noteText }: {
-  number: string;
-  title: string;
-  children: React.ReactNode;
-  noteText?: string;
-}) {
-  return (
-    <div className="bg-card border-2 border-dashed border-amber-400 rounded-lg overflow-hidden">
-      <div className="bg-amber-50 dark:bg-amber-950/40 px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="bg-amber-500 p-2 rounded-lg">
-            <Clock className="text-white" size={20} />
-          </div>
-          <h3 className="text-xl font-bold text-foreground">
-            {number}. {title}
-          </h3>
-        </div>
-        <span className="inline-flex items-center gap-1.5 bg-amber-100 text-amber-800 dark:text-amber-200 text-xs font-semibold px-3 py-1.5 rounded-full">
-          <AlertTriangle size={14} />
-          Pendiente
-        </span>
-      </div>
-
-      <div className="px-6 py-5">
-        <div className="text-muted-foreground">
-          {children}
-        </div>
-
-        <div className="mt-5 bg-amber-50 dark:bg-amber-950/30 dark:border-amber-400/30 border border-amber-200 rounded-lg p-4 flex gap-3">
-          <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
-          <div>
-            <p className="text-sm font-semibold text-amber-800 dark:text-amber-200 mb-1">Contenido por completar</p>
-            <p className="text-sm text-amber-700">
-              {noteText || 'Esta sección muestra la estructura genérica según el PMBOK. El contenido específico del proyecto HEVES será añadido conforme se avance en la formulación del proyecto.'}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+import { Users, Settings } from 'lucide-react';
+import { PageTitle, HerramientaRecopilacionDatos, HerramientaRepresentacionDatos } from '../components/sections';
 
 export default function PlanParticipacionHerramientasPage() {
   return (
@@ -63,52 +21,9 @@ export default function PlanParticipacionHerramientasPage() {
         </div>
 
         <div className="space-y-6">
-          <HerramientaJuicioExpertos
-            title="1. Juicio de Expertos"
-            items={[
-              '• Estrategias de participación de interesados en proyectos de TI',
-              '• Conocimiento del entorno hospitalario y de salud',
-              '• Gestión del cambio organizacional',
-              '• Comprensión del contexto político y regulatorio',
-            ]}
-          />
+          <HerramientaRecopilacionDatos idx={1} />
 
-          <HerramientaRecopilacionDatos idx={2} />
-
-          <div className="bg-card border border-border rounded-lg p-6">
-            <h3 className="text-xl font-bold text-foreground mb-3">
-              3. Análisis de Datos
-            </h3>
-            <p className="text-muted-foreground mb-3">
-              Evaluar el nivel actual y deseado de participación:
-            </p>
-            <ul className="space-y-2 text-muted-foreground ml-4">
-              <li>• <strong>Análisis de Supuestos y Restricciones:</strong> Identificar supuestos sobre la disponibilidad y disposición de los interesados</li>
-              <li>• <strong>Análisis de Documentos:</strong> Revisar documentación existente para comprender las relaciones con interesados</li>
-            </ul>
-          </div>
-
-          <PendingSection number="4" title="Toma de Decisiones">
-            <p className="text-muted-foreground mb-3">
-              Técnicas para seleccionar las estrategias de participación más adecuadas:
-            </p>
-            <ul className="space-y-2 text-muted-foreground ml-4">
-              <li>• <strong>Priorización:</strong> Determinar qué interesados requieren mayor nivel de involucramiento</li>
-              <li>• <strong>Votación:</strong> Consenso del equipo sobre las estrategias de participación</li>
-            </ul>
-          </PendingSection>
-
-          <HerramientaRepresentacionDatos idx={5} />
-
-          <HerramientaReuniones
-            title="6. Reuniones"
-            items={[
-              '• Definir estrategias de participación para cada interesado clave',
-              '• Identificar barreras y oportunidades de involucramiento',
-              '• Establecer cronogramas de comunicación y participación',
-              '• Asignar responsabilidades para la gestión de interesados',
-            ]}
-          />
+          <HerramientaRepresentacionDatos idx={2} />
         </div>
       </section>
     </div>

@@ -1,47 +1,5 @@
-import { Users, ArrowRight, CheckCircle, AlertTriangle, Clock } from 'lucide-react';
-import { PageTitle, EntradaFactoresAmbientalesHEVES, EntradaActivosProcesosHEVES } from '../components/sections';
-
-function PendingSection({ number, title, children, noteText }: {
-  number: string;
-  title: string;
-  children: React.ReactNode;
-  noteText?: string;
-}) {
-  return (
-    <div className="bg-card border-2 border-dashed border-amber-400 rounded-lg overflow-hidden">
-      <div className="bg-amber-50 dark:bg-amber-950/40 px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="bg-amber-500 p-2 rounded-lg">
-            <Clock className="text-white" size={20} />
-          </div>
-          <h3 className="text-xl font-bold text-foreground">
-            {number}. {title}
-          </h3>
-        </div>
-        <span className="inline-flex items-center gap-1.5 bg-amber-100 text-amber-800 dark:text-amber-200 text-xs font-semibold px-3 py-1.5 rounded-full">
-          <AlertTriangle size={14} />
-          Pendiente
-        </span>
-      </div>
-
-      <div className="px-6 py-5">
-        <div className="text-muted-foreground">
-          {children}
-        </div>
-
-        <div className="mt-5 bg-amber-50 dark:bg-amber-950/30 dark:border-amber-400/30 border border-amber-200 rounded-lg p-4 flex gap-3">
-          <AlertTriangle className="text-amber-500 flex-shrink-0 mt-0.5" size={20} />
-          <div>
-            <p className="text-sm font-semibold text-amber-800 dark:text-amber-200 mb-1">Contenido por completar</p>
-            <p className="text-sm text-amber-700">
-              {noteText || 'Esta sección muestra la estructura genérica según el PMBOK. El contenido específico del proyecto HEVES será añadido conforme se avance en la formulación del proyecto.'}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+import { Users, ArrowRight } from 'lucide-react';
+import { PageTitle, LinkCard, EntradaFactoresAmbientalesHEVES, EntradaActivosProcesosHEVES } from '../components/sections';
 
 export default function PlanParticipacionEntradasPage() {
   return (
@@ -63,56 +21,11 @@ export default function PlanParticipacionEntradasPage() {
         </div>
 
         <div className="space-y-6">
-          <PendingSection number="1" title="Acta de Constitución del Proyecto">
-            <p className="text-muted-foreground mb-3">
-              Proporciona información de alto nivel sobre los interesados clave y los requisitos del proyecto:
-            </p>
-            <ul className="space-y-2 text-muted-foreground ml-4">
-              <li>• Propósito y justificación del proyecto ITSM</li>
-              <li>• Objetivos medibles y criterios de éxito</li>
-              <li>• Lista inicial de interesados identificados</li>
-              <li>• Requisitos de alto nivel</li>
-            </ul>
-          </PendingSection>
+          <LinkCard idx={1} title="Acta de Constitución del Proyecto" to="/acta/salidas" />
 
-          <PendingSection number="2" title="Plan para la Dirección del Proyecto">
-            <p className="text-muted-foreground mb-3">
-              Componentes relevantes que se utilizan como entrada:
-            </p>
-            <ul className="space-y-2 text-muted-foreground ml-4">
-              <li>• <strong>Plan de Gestión de Recursos:</strong> Define cómo se involucrarán los recursos físicos y del equipo</li>
-              <li>• <strong>Plan de Gestión de las Comunicaciones:</strong> Proporciona información sobre cómo se comunicará con los interesados</li>
-              <li>• <strong>Plan de Gestión de Riesgos:</strong> Identifica cómo se involucrarán los interesados según su tolerancia al riesgo</li>
-            </ul>
-          </PendingSection>
+          <EntradaFactoresAmbientalesHEVES idx={2} />
 
-          <PendingSection number="3" title="Documentos del Proyecto">
-            <p className="text-muted-foreground mb-3">
-              Documentos del proyecto que se utilizan como entradas:
-            </p>
-            <ul className="space-y-2 text-muted-foreground ml-4">
-              <li>• <strong>Registro de Interesados:</strong> Información detallada sobre los interesados identificados</li>
-              <li>• <strong>Registro de Supuestos:</strong> Supuestos que pueden influir en la participación de los interesados</li>
-              <li>• <strong>Registro de Cambios:</strong> Cambios aprobados que pueden afectar la participación</li>
-              <li>• <strong>Registro de Lecciones Aprendidas:</strong> Información de fases anteriores del proyecto</li>
-            </ul>
-          </PendingSection>
-
-          <PendingSection number="4" title="Acuerdos">
-            <p className="text-muted-foreground mb-3">
-              Definen a los interesados externos y sus expectativas:
-            </p>
-            <ul className="space-y-2 text-muted-foreground ml-4">
-              <li>• Convenios con organizaciones externas</li>
-              <li>• Contratos con proveedores</li>
-              <li>• Acuerdos de nivel de servicio (SLA)</li>
-              <li>• Compromisos con entidades reguladoras</li>
-            </ul>
-          </PendingSection>
-
-          <EntradaFactoresAmbientalesHEVES />
-
-          <EntradaActivosProcesosHEVES />
+          <EntradaActivosProcesosHEVES idx={3} />
         </div>
       </section>
     </div>
