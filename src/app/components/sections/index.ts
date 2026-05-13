@@ -6,3 +6,4 @@ export { HerramientaRepresentacionDatos } from './tools/HerramientaRepresentacio
 export { HerramientaReuniones } from './tools/HerramientaReuniones';
 export { HerramientaMatrizPoderInteres } from './tools/HerramientaMatrizPoderInteres';
 export { PageTitle } from './PageTitle';
+export { LinkCard } from './LinkCard';
