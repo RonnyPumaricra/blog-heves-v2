@@ -1,4 +1,5 @@
 import { Menu } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 interface NavigationProps {
   onToggleSidebar: () => void;
@@ -13,49 +14,47 @@ export function Navigation({ onToggleSidebar, onScrollTo }: NavigationProps) {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="flex items-center gap-4 px-6 py-4">
-        {/* Botón para toggle sidebar */}
         <button
           onClick={onToggleSidebar}
-          className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          className="p-2 rounded-lg hover:bg-accent transition-colors"
           aria-label="Toggle sidebar"
         >
-          <Menu size={24} className="text-gray-700" />
+          <Menu size={24} className="text-muted-foreground" />
         </button>
 
-        {/* Logo/Título */}
-        <div className="text-xl md:text-2xl font-bold text-blue-900">
-          Gestión de Servicios Informáticos HEVES
+        <div className="text-xl md:text-2xl font-bold text-blue-900 dark:text-blue-600">
+          Gestión de Incidencias HEVES
         </div>
 
         <div className="flex-1" />
 
-        {/* Navegación principal */}
         <div className="hidden md:flex items-center gap-2">
           {menuItems.map((item) => (
             <button
               key={item.id}
               onClick={() => onScrollTo(item.id)}
-              className="px-4 py-2 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors"
+              className="px-4 py-2 rounded-lg text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
             >
               {item.label}
             </button>
           ))}
         </div>
 
-        {/* Navegación móvil */}
         <div className="flex md:hidden items-center gap-2">
           {menuItems.map((item) => (
             <button
               key={item.id}
               onClick={() => onScrollTo(item.id)}
-              className="px-3 py-2 text-sm rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-900 transition-colors"
+              className="px-3 py-2 text-sm rounded-lg text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
             >
               {item.label}
             </button>
           ))}
         </div>
+
+        <ThemeToggle />
       </div>
     </nav>
   );

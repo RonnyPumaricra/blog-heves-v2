@@ -16,11 +16,11 @@ export function PageTitle({ icon: Icon, iconBgColor, title, subtitle, descriptio
           <Icon className="text-white" size={28} />
         </div>
         <div>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{title}</h1>
-          <p className="text-gray-600 mt-1">{subtitle}</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground">{title}</h1>
+          <p className="text-muted-foreground mt-1">{subtitle}</p>
         </div>
       </div>
-      <p className="text-lg text-gray-700">{description}</p>
+      <p className="text-lg text-muted-foreground">{description}</p>
     </div>
   )
 }

@@ -83,7 +83,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navigation
         onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
         onScrollTo={handleScrollTo}
@@ -100,77 +100,77 @@ export default function App() {
       >
         <Routes>
           <Route path="/acta/entradas" element={
-            <section className="bg-gray-50 py-12 min-h-screen">
+            <section className="bg-muted/50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <ActaEntradasPage />
               </div>
             </section>
           } />
           <Route path="/acta/contenido" element={
-            <section className="bg-gray-50 py-12 min-h-screen">
+            <section className="bg-muted/50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <ActaContenidoPage />
               </div>
             </section>
           } />
           <Route path="/acta/salidas" element={
-            <section className="bg-gray-50 py-12 min-h-screen">
+            <section className="bg-muted/50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <ActaSalidasPage />
               </div>
             </section>
           } />
           <Route path="/interesados/entradas" element={
-            <section className="bg-gray-50 py-12 min-h-screen">
+            <section className="bg-muted/50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <InteresadosEntradasPage />
               </div>
             </section>
           } />
           <Route path="/interesados/herramientas" element={
-            <section className="bg-gray-50 py-12 min-h-screen">
+            <section className="bg-muted/50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <InteresadosHerramientasPage />
               </div>
             </section>
           } />
           <Route path="/interesados/salidas" element={
-            <section className="bg-gray-50 py-12 min-h-screen">
+            <section className="bg-muted/50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md-px-12">
                 <InteresadosSalidasPage />
               </div>
             </section>
           } />
           <Route path="/plan-participacion/entradas" element={
-            <section className="bg-gray-50 py-12 min-h-screen">
+            <section className="bg-muted/50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <PlanParticipacionEntradasPage />
               </div>
             </section>
           } />
           <Route path="/plan-participacion/herramientas" element={
-            <section className="bg-gray-50 py-12 min-h-screen">
+            <section className="bg-muted/50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <PlanParticipacionHerramientasPage />
               </div>
             </section>
           } />
           <Route path="/plan-participacion/salidas" element={
-            <section className="bg-gray-50 py-12 min-h-screen">
+            <section className="bg-muted/50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <PlanParticipacionSalidasPage />
               </div>
             </section>
           } />
           <Route path="/eml/arbol-problemas" element={
-            <section className="bg-gray-50 py-12 min-h-screen">
+            <section className="bg-muted/50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <ArbolProblemasPage />
               </div>
             </section>
           } />
           <Route path="/eml/arbol-objetivos" element={
-            <section className="bg-gray-50 py-12 min-h-screen">
+            <section className="bg-muted/50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <ArbolObjetivosPage />
               </div>

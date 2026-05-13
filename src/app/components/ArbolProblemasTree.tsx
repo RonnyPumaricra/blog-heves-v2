@@ -54,12 +54,12 @@ const rows = Array.from(
 ).sort(([a], [b]) => a - b);
 
 const levelConfig: Record<string, { bg: string; border: string; borderWidth: string; text: string; titleWeight: string }> = {
-  'efecto-final':      { bg: 'bg-red-100',      border: 'border-red-600', borderWidth: 'border-2', text: 'text-red-900', titleWeight: 'font-bold' },
-  'efecto-indirecto':  { bg: 'bg-rose-100',     border: 'border-rose-400', borderWidth: 'border', text: 'text-rose-800', titleWeight: 'font-semibold' },
-  'efecto-directo':    { bg: 'bg-orange-100',    border: 'border-orange-500', borderWidth: 'border', text: 'text-orange-800', titleWeight: 'font-semibold' },
-  'problema-central':  { bg: 'bg-amber-100',    border: 'border-amber-600', borderWidth: 'border-2', text: 'text-amber-900', titleWeight: 'font-bold' },
-  'causa-directa':     { bg: 'bg-blue-100',      border: 'border-blue-500', borderWidth: 'border', text: 'text-blue-800', titleWeight: 'font-semibold' },
-  'causa-indirecta':   { bg: 'bg-slate-100',     border: 'border-slate-400', borderWidth: 'border', text: 'text-slate-700', titleWeight: 'font-medium' },
+  'efecto-final':      { bg: 'bg-red-100 dark:bg-red-950/40',      border: 'border-red-600', borderWidth: 'border-2', text: 'text-red-900 dark:text-red-100', titleWeight: 'font-bold' },
+  'efecto-indirecto':  { bg: 'bg-rose-100 dark:bg-rose-950/40',    border: 'border-rose-400', borderWidth: 'border', text: 'text-rose-800 dark:text-rose-200', titleWeight: 'font-semibold' },
+  'efecto-directo':    { bg: 'bg-orange-100 dark:bg-orange-950/40', border: 'border-orange-500', borderWidth: 'border', text: 'text-orange-800 dark:text-orange-200', titleWeight: 'font-semibold' },
+  'problema-central':  { bg: 'bg-amber-100 dark:bg-amber-950/40', border: 'border-amber-600', borderWidth: 'border-2', text: 'text-amber-900 dark:text-amber-100', titleWeight: 'font-bold' },
+  'causa-directa':     { bg: 'bg-blue-100 dark:bg-blue-950/40',    border: 'border-blue-500', borderWidth: 'border', text: 'text-blue-800 dark:text-blue-200', titleWeight: 'font-semibold' },
+  'causa-indirecta':   { bg: 'bg-slate-100 dark:bg-slate-950/40',  border: 'border-slate-400', borderWidth: 'border', text: 'text-slate-700 dark:text-slate-300', titleWeight: 'font-medium' },
 };
 
 export default function ArbolProblemasTree() {

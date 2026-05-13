@@ -58,7 +58,7 @@ export function MethodologyPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white pt-24 pb-12">
+    <div className="min-h-screen bg-background pt-24 pb-12">
       {/* Header - Desktop */}
       <section className="hidden md:block relative h-96 mb-12">
         <img
@@ -94,15 +94,15 @@ export function MethodologyPage() {
       {/* Introduction */}
       <section className="max-w-7xl mx-auto px-6 md:px-8 mb-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Why PMBOK for Healthcare?
           </h2>
-          <p className="text-lg text-gray-700 mb-4">
+          <p className="text-lg text-muted-foreground mb-4">
             The Project Management Body of Knowledge (PMBOK) provides a proven framework for
             managing complex initiatives. In healthcare social projects, where lives and wellbeing
             are at stake, systematic planning and execution are not just beneficial—they're essential.
           </p>
-          <p className="text-lg text-gray-700">
+          <p className="text-lg text-muted-foreground">
             Our adoption of PMBOK methodologies ensures that every patient interaction, every
             community program, and every resource allocation is guided by best practices in project
             management.
@@ -113,10 +113,10 @@ export function MethodologyPage() {
       {/* Knowledge Areas Grid */}
       <section className="bg-gradient-to-b from-blue-50 to-white py-16 mb-16">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
             10 Knowledge Areas Applied
           </h2>
-          <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-12 text-center max-w-3xl mx-auto">
             Each PMBOK knowledge area is tailored to address the unique challenges of healthcare
             delivery and social impact.
           </p>
@@ -126,15 +126,15 @@ export function MethodologyPage() {
               return (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                  className="bg-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="bg-blue-100 p-3 rounded-lg">
                       <Icon className="text-blue-600" size={24} />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">{area.title}</h3>
+                    <h3 className="text-xl font-bold text-foreground">{area.title}</h3>
                   </div>
-                  <p className="text-gray-700">{area.description}</p>
+                  <p className="text-muted-foreground">{area.description}</p>
                 </div>
               );
             })}
@@ -144,7 +144,7 @@ export function MethodologyPage() {
 
       {/* Project Lifecycle */}
       <section className="max-w-7xl mx-auto px-6 md:px-8 mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
           Project Lifecycle Phases
         </h2>
         <div className="grid md:grid-cols-5 gap-4">
@@ -177,7 +177,7 @@ export function MethodologyPage() {
       </section>
 
       {/* Case Study */}
-      <section className="bg-blue-50 py-16">
+      <section className="bg-blue-50 dark:bg-blue-950/30 py-16">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
@@ -188,13 +188,13 @@ export function MethodologyPage() {
               />
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 PMBOK in Action: Patient Support Program
               </h2>
-              <p className="text-lg text-gray-700 mb-4">
+              <p className="text-lg text-muted-foreground mb-4">
                 Our flagship patient support program demonstrates PMBOK principles in practice:
               </p>
-              <ul className="space-y-3 text-gray-700">
+              <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-3 mt-1">✓</span>
                   <span>
@@ -233,7 +233,7 @@ export function MethodologyPage() {
 
       {/* Benefits */}
       <section className="max-w-5xl mx-auto px-6 md:px-8 py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
           Benefits of Our Approach
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
@@ -242,8 +242,8 @@ export function MethodologyPage() {
               <CheckCircle className="text-green-600" size={24} />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Measurable Outcomes</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-bold text-foreground mb-2">Measurable Outcomes</h3>
+              <p className="text-muted-foreground">
                 Data-driven metrics track real impact on patient health and community wellbeing.
               </p>
             </div>
@@ -253,8 +253,8 @@ export function MethodologyPage() {
               <CheckCircle className="text-green-600" size={24} />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Resource Efficiency</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-bold text-foreground mb-2">Resource Efficiency</h3>
+              <p className="text-muted-foreground">
                 Optimal allocation ensures maximum impact from limited healthcare resources.
               </p>
             </div>
@@ -264,8 +264,8 @@ export function MethodologyPage() {
               <CheckCircle className="text-green-600" size={24} />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Risk Mitigation</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-bold text-foreground mb-2">Risk Mitigation</h3>
+              <p className="text-muted-foreground">
                 Proactive identification and management of potential issues before they impact care.
               </p>
             </div>
@@ -275,8 +275,8 @@ export function MethodologyPage() {
               <CheckCircle className="text-green-600" size={24} />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Stakeholder Alignment</h3>
-              <p className="text-gray-700">
+              <h3 className="text-xl font-bold text-foreground mb-2">Stakeholder Alignment</h3>
+              <p className="text-muted-foreground">
                 Clear communication keeps everyone working toward shared healthcare goals.
               </p>
             </div>

@@ -13,8 +13,8 @@ export default function ArbolObjetivosPage() {
         description="Transformación del problema central en objetivos y medios para alcanzarlos."
       />
 
-      <div className="bg-white border border-gray-200 rounded-lg p-6 mb-6">
-        <div className="mb-4 flex flex-wrap items-center gap-4 text-sm text-gray-500">
+      <div className="bg-card border border-border rounded-lg p-6 mb-6">
+        <div className="mb-4 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
           <span className="flex items-center gap-1.5">
             <span className="w-3 h-3 rounded bg-gray-100 border border-gray-400 inline-block" />
             Medios Finales

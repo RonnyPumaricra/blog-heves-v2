@@ -27,7 +27,7 @@ export function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white pt-24 pb-12">
+    <div className="min-h-screen bg-background pt-24 pb-12">
       {/* Header - Desktop */}
       <section className="hidden md:block relative h-96 mb-12">
         <img
@@ -65,8 +65,8 @@ export function ContactPage() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
-            <p className="text-lg text-gray-700 mb-8">
+            <h2 className="text-3xl font-bold text-foreground mb-6">Contact Information</h2>
+            <p className="text-lg text-muted-foreground mb-8">
               Whether you're a patient, community partner, or interested in our PMBOK approach to
               healthcare projects, we'd love to hear from you.
             </p>
@@ -77,8 +77,8 @@ export function ContactPage() {
                   <MapPin className="text-blue-600" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Address</h3>
-                  <p className="text-gray-700">
+                  <h3 className="font-bold text-foreground mb-1">Address</h3>
+                  <p className="text-muted-foreground">
                     Central Community Hospital<br />
                     123 Healthcare Avenue<br />
                     Medical District, City 12345
@@ -91,8 +91,8 @@ export function ContactPage() {
                   <Phone className="text-blue-600" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Phone</h3>
-                  <p className="text-gray-700">
+                  <h3 className="font-bold text-foreground mb-1">Phone</h3>
+                  <p className="text-muted-foreground">
                     Main: (555) 123-4567<br />
                     Project Hotline: (555) 123-4568
                   </p>
@@ -104,8 +104,8 @@ export function ContactPage() {
                   <Mail className="text-blue-600" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Email</h3>
-                  <p className="text-gray-700">
+                  <h3 className="font-bold text-foreground mb-1">Email</h3>
+                  <p className="text-muted-foreground">
                     General: info@hospitalproject.org<br />
                     Partnerships: partners@hospitalproject.org
                   </p>
@@ -117,8 +117,8 @@ export function ContactPage() {
                   <Clock className="text-blue-600" size={24} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Office Hours</h3>
-                  <p className="text-gray-700">
+                  <h3 className="font-bold text-foreground mb-1">Office Hours</h3>
+                  <p className="text-muted-foreground">
                     Monday - Friday: 8:00 AM - 6:00 PM<br />
                     Saturday: 9:00 AM - 2:00 PM<br />
                     Sunday: Closed
@@ -127,12 +127,12 @@ export function ContactPage() {
               </div>
             </div>
 
-            <div className="mt-8 p-6 bg-blue-50 rounded-xl">
-              <h3 className="font-bold text-gray-900 mb-3">Emergency Services</h3>
-              <p className="text-gray-700 mb-2">
+            <div className="mt-8 p-6 bg-blue-50 dark:bg-blue-950/30 rounded-xl">
+              <h3 className="font-bold text-foreground mb-3">Emergency Services</h3>
+              <p className="text-muted-foreground mb-2">
                 For medical emergencies, please call 911 or visit the hospital emergency department.
               </p>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-muted-foreground">
                 This project focuses on non-emergency social support and community health initiatives.
               </p>
             </div>
@@ -140,11 +140,11 @@ export function ContactPage() {
 
           {/* Contact Form */}
           <div>
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+            <div className="bg-card rounded-2xl shadow-xl p-8">
+              <h2 className="text-3xl font-bold text-foreground mb-6">Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-gray-900 mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
                     Full Name *
                   </label>
                   <input
@@ -154,13 +154,13 @@ export function ContactPage() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                     placeholder="John Doe"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">
                     Email Address *
                   </label>
                   <input
@@ -170,13 +170,13 @@ export function ContactPage() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                     placeholder="john@example.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-semibold text-gray-900 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-semibold text-foreground mb-2">
                     Subject *
                   </label>
                   <select
@@ -185,7 +185,7 @@ export function ContactPage() {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                   >
                     <option value="">Select a subject</option>
                     <option value="patient-services">Patient Services Inquiry</option>
@@ -198,7 +198,7 @@ export function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-900 mb-2">
+                  <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2">
                     Message *
                   </label>
                   <textarea
@@ -208,7 +208,7 @@ export function ContactPage() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent resize-none"
                     placeholder="Tell us how we can help..."
                   />
                 </div>
@@ -229,10 +229,10 @@ export function ContactPage() {
       {/* Team Section */}
       <section className="bg-gradient-to-b from-blue-50 to-white py-16">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
             Meet Our Project Team
           </h2>
-          <p className="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-12 text-center max-w-3xl mx-auto">
             Our multidisciplinary team combines healthcare expertise with certified project management
             skills to deliver exceptional results.
           </p>
@@ -246,36 +246,36 @@ export function ContactPage() {
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
-              <h3 className="font-bold text-gray-900 mb-1">Dr. Jennifer Lee</h3>
+              <h3 className="font-bold text-foreground mb-1">Dr. Jennifer Lee</h3>
               <p className="text-sm text-blue-600 mb-2">Project Director</p>
-              <p className="text-sm text-gray-600">PMP, MD</p>
+              <p className="text-sm text-muted-foreground">PMP, MD</p>
             </div>
 
             <div className="text-center">
               <div className="w-32 h-32 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl">
                 👨‍⚕️
               </div>
-              <h3 className="font-bold text-gray-900 mb-1">James Chen</h3>
+              <h3 className="font-bold text-foreground mb-1">James Chen</h3>
               <p className="text-sm text-blue-600 mb-2">Senior Project Manager</p>
-              <p className="text-sm text-gray-600">PMP, MPH</p>
+              <p className="text-sm text-muted-foreground">PMP, MPH</p>
             </div>
 
             <div className="text-center">
               <div className="w-32 h-32 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl">
                 👩‍⚕️
               </div>
-              <h3 className="font-bold text-gray-900 mb-1">Dr. Maria Santos</h3>
+              <h3 className="font-bold text-foreground mb-1">Dr. Maria Santos</h3>
               <p className="text-sm text-blue-600 mb-2">Clinical Lead</p>
-              <p className="text-sm text-gray-600">MD, CAPM</p>
+              <p className="text-sm text-muted-foreground">MD, CAPM</p>
             </div>
 
             <div className="text-center">
               <div className="w-32 h-32 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl">
                 👨‍💼
               </div>
-              <h3 className="font-bold text-gray-900 mb-1">Michael Rodriguez</h3>
+              <h3 className="font-bold text-foreground mb-1">Michael Rodriguez</h3>
               <p className="text-sm text-blue-600 mb-2">Community Engagement</p>
-              <p className="text-sm text-gray-600">MSW, PMP</p>
+              <p className="text-sm text-muted-foreground">MSW, PMP</p>
             </div>
           </div>
         </div>
@@ -284,7 +284,7 @@ export function ContactPage() {
       {/* Map Placeholder */}
       <section className="max-w-7xl mx-auto px-6 md:px-8 mt-16">
         <div className="bg-gray-200 rounded-2xl overflow-hidden h-96 flex items-center justify-center">
-          <div className="text-center text-gray-600">
+          <div className="text-center text-muted-foreground">
             <MapPin size={48} className="mx-auto mb-4" />
             <p className="text-lg">Map view would be integrated here</p>
             <p className="text-sm">Central Community Hospital Location</p>

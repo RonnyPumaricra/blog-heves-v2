@@ -54,12 +54,12 @@ const rows = Array.from(
 ).sort(([a], [b]) => a - b);
 
 const levelConfig: Record<string, { bg: string; border: string; borderWidth: string; text: string; titleWeight: string }> = {
-  'fin-final':        { bg: 'bg-emerald-100',  border: 'border-emerald-600', borderWidth: 'border-2', text: 'text-emerald-900', titleWeight: 'font-bold' },
-  'fin-indirecto':    { bg: 'bg-teal-100',      border: 'border-teal-400',   borderWidth: 'border',   text: 'text-teal-800',   titleWeight: 'font-semibold' },
-  'fin-directo':      { bg: 'bg-green-100',     border: 'border-green-500',  borderWidth: 'border',   text: 'text-green-800',  titleWeight: 'font-semibold' },
-  'objetivo-central': { bg: 'bg-sky-100',       border: 'border-sky-600',   borderWidth: 'border-2', text: 'text-sky-900',   titleWeight: 'font-bold' },
-  'medio-directo':    { bg: 'bg-indigo-100',     border: 'border-indigo-500', borderWidth: 'border',   text: 'text-indigo-800', titleWeight: 'font-semibold' },
-  'medio-final':      { bg: 'bg-slate-100',      border: 'border-slate-400', borderWidth: 'border',   text: 'text-slate-700',  titleWeight: 'font-medium' },
+  'fin-final':        { bg: 'bg-emerald-100 dark:bg-emerald-950/40',  border: 'border-emerald-600', borderWidth: 'border-2', text: 'text-emerald-900 dark:text-emerald-100', titleWeight: 'font-bold' },
+  'fin-indirecto':    { bg: 'bg-teal-100 dark:bg-teal-950/40',       border: 'border-teal-400',   borderWidth: 'border',   text: 'text-teal-800 dark:text-teal-200',      titleWeight: 'font-semibold' },
+  'fin-directo':      { bg: 'bg-green-100 dark:bg-green-950/40',     border: 'border-green-500',  borderWidth: 'border',   text: 'text-green-800 dark:text-green-200',    titleWeight: 'font-semibold' },
+  'objetivo-central': { bg: 'bg-sky-100 dark:bg-sky-950/40',        border: 'border-sky-600',   borderWidth: 'border-2', text: 'text-sky-900 dark:text-sky-100',        titleWeight: 'font-bold' },
+  'medio-directo':    { bg: 'bg-indigo-100 dark:bg-indigo-950/40',   border: 'border-indigo-500', borderWidth: 'border',   text: 'text-indigo-800 dark:text-indigo-200',  titleWeight: 'font-semibold' },
+  'medio-final':      { bg: 'bg-slate-100 dark:bg-slate-950/40',     border: 'border-slate-400', borderWidth: 'border',   text: 'text-slate-700 dark:text-slate-300',    titleWeight: 'font-medium' },
 };
 
 export default function ArbolObjetivosTree() {

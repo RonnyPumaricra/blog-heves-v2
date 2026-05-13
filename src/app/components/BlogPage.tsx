@@ -74,7 +74,7 @@ export function BlogPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white pt-24 pb-12">
+    <div className="min-h-screen bg-background pt-24 pb-12">
       {/* Header - Desktop */}
       <section className="hidden md:block relative h-96 mb-12">
         <img
@@ -139,7 +139,7 @@ export function BlogPage() {
                   <span>Dr. Jennifer Lee, Project Director</span>
                 </div>
               </div>
-              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors w-fit flex items-center gap-2">
+              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-colors w-fit flex items-center gap-2">
                 Read Full Story
                 <ArrowRight size={18} />
               </button>
@@ -150,12 +150,12 @@ export function BlogPage() {
 
       {/* Blog Posts Grid */}
       <section className="max-w-7xl mx-auto px-6 md:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Recent Updates</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">Recent Updates</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
             <article
               key={post.id}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group cursor-pointer"
+              className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group cursor-pointer"
             >
               <div className="relative h-56 overflow-hidden">
                 <img
@@ -168,11 +168,11 @@ export function BlogPage() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-blue-600 transition-colors">
                   {post.title}
                 </h3>
-                <p className="text-gray-700 mb-4 line-clamp-3">{post.excerpt}</p>
-                <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                <p className="text-muted-foreground mb-4 line-clamp-3">{post.excerpt}</p>
+                <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
                   <div className="flex items-center gap-1">
                     <Calendar size={14} />
                     <span>{post.date}</span>
@@ -180,11 +180,11 @@ export function BlogPage() {
                   <span>•</span>
                   <span>{post.readTime}</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-700">
+                <div className="flex items-center gap-2 text-muted-foreground">
                   <User size={16} />
                   <span className="text-sm">{post.author}</span>
                 </div>
-                <div className="mt-4 pt-4 border-t border-gray-200">
+                <div className="mt-4 pt-4 border-t border-border">
                   <button className="text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">
                     Read More
                     <ArrowRight size={16} />
@@ -207,9 +207,9 @@ export function BlogPage() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-6 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
+              className="flex-1 px-6 py-3 rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-white"
             />
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-colors">
               Subscribe
             </button>
           </div>

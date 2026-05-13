@@ -6,20 +6,20 @@ interface SectionCardProps {
 }
 
 const Card = styled.div`
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
+  background-color: var(--card);
+  border: 1px solid var(--border);
   border-radius: 0.5rem;
   padding: 1.5rem;
 
   & > h3:first-child {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #111827;
+    color: var(--card-foreground);
     margin: 0 0 0.75rem 0;
   }
 
   & p {
-    color: #374151;
+    color: var(--muted-foreground);
     margin: 0 0 0.75rem 0;
   }
 
@@ -28,7 +28,7 @@ const Card = styled.div`
   }
 
   & ul {
-    color: #374151;
+    color: var(--muted-foreground);
     margin: 0 0 0.5rem 1rem;
     padding: 0;
     display: flex;
@@ -47,7 +47,7 @@ const Card = styled.div`
   & h4 {
     font-size: 1rem;
     font-weight: 600;
-    color: #111827;
+    color: var(--card-foreground);
     margin: 0 0 0.5rem 0;
   }
 `

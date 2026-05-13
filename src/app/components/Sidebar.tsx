@@ -74,21 +74,21 @@ export function Sidebar({ isOpen }: SidebarProps) {
 
       {/* Sidebar */}
       <aside
-        className={`fixed left-0 top-20 bottom-0 w-80 bg-white border-r border-gray-200 z-40 transition-transform duration-300 overflow-y-auto ${
+        className={`fixed left-0 top-20 bottom-0 w-80 bg-sidebar border-r border-sidebar-border z-40 transition-transform duration-300 overflow-y-auto ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         <div className="p-6">
           <div className="mb-6">
-            <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
+            <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">
               PMBOK 6th Edition
             </h2>
-            <p className="text-xs text-gray-600">
+            <p className="text-xs text-muted-foreground">
               Gestión de Proyectos Hospitalarios
             </p>
           </div>
 
-          <div className="border-t border-gray-200 my-4" />
+          <div className="border-t border-sidebar-border my-4" />
 
           <nav className="space-y-2">
             {menuItems.map((item) => {
@@ -106,8 +106,8 @@ export function Sidebar({ isOpen }: SidebarProps) {
                     }}
                     className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
                       isActive
-                        ? 'bg-blue-100 text-blue-900'
-                        : 'text-gray-700 hover:bg-gray-100'
+                        ? 'bg-sidebar-accent text-sidebar-accent-foreground'
+                        : 'text-sidebar-foreground hover:bg-sidebar-accent'
                     }`}
                   >
                     <Icon size={18} className="flex-shrink-0" />
@@ -129,8 +129,8 @@ export function Sidebar({ isOpen }: SidebarProps) {
                           to={child.path}
                           className={`w-full block text-left px-4 py-2 rounded-lg text-sm transition-colors ${
                             location.pathname === child.path
-                              ? 'bg-blue-50 text-blue-900 font-medium'
-                              : 'text-gray-600 hover:bg-gray-50'
+                              ? 'bg-sidebar-accent text-sidebar-accent-foreground font-medium'
+                              : 'text-sidebar-foreground hover:bg-sidebar-accent/50'
                           }`}
                         >
                           {child.label}
@@ -143,11 +143,11 @@ export function Sidebar({ isOpen }: SidebarProps) {
             })}
           </nav>
 
-          <div className="mt-8 p-4 bg-blue-50 rounded-lg">
-            <h3 className="text-sm font-semibold text-blue-900 mb-2">
+          <div className="mt-8 p-4 bg-sidebar-accent rounded-lg">
+            <h3 className="text-sm font-semibold text-sidebar-accent-foreground mb-2">
               Metodología PMBOK
             </h3>
-            <p className="text-xs text-blue-700">
+            <p className="text-xs text-sidebar-foreground">
               Esta documentación sigue las mejores prácticas del Project Management Body of Knowledge,
               6ta Edición.
             </p>

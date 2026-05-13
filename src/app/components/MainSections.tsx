@@ -5,14 +5,14 @@ import { Building2, Target, Calendar, DollarSign, Users, Mail } from 'lucide-rea
 
 export function InicioSection() {
   return (
-    <section id="inicio" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white scroll-mt-20">
+    <section id="inicio" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 dark:from-blue-950 to-background scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Mejora de la Gestión de Servicios Informáticos del HEVES
             </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-8">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
               Implementación de procesos ITIL 4 para la gestión de incidentes y cambios,
               gestionado bajo el marco PMBOK 6ta Edición
             </p>
@@ -46,32 +46,32 @@ export function InicioSection() {
             <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
               <Target className="text-blue-600" size={24} />
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Objetivo Principal</h3>
-            <p className="text-gray-700">
+            <h3 className="text-xl font-bold text-foreground mb-3">Objetivo Principal</h3>
+            <p className="text-muted-foreground">
               Mejorar el acceso y calidad de atención social para pacientes vulnerables mediante
               programas de apoyo integral.
             </p>
           </div>
           */}
 
-          <div className="bg-white p-6 rounded-xl shadow-lg">
+          <div className="bg-card p-6 rounded-xl shadow-lg border border-border">
             <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
               <Building2 className="text-green-600" size={24} />
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Ubicación</h3>
-            <p className="text-gray-700">
+            <h3 className="text-xl font-bold text-card-foreground mb-3">Ubicación</h3>
+            <p className="text-muted-foreground">
               Hospital de Emergencias Villa El Salvador<br />
               Av. 200 Millas S/N, Villa El Salvador, Lima<br />
               Inaugurado el 7 de abril de 2016
             </p>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-lg">
+          <div className="bg-card p-6 rounded-xl shadow-lg border border-border">
             <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
               <Calendar className="text-purple-600" size={24} />
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Período</h3>
-            <p className="text-gray-700">
+            <h3 className="text-xl font-bold text-card-foreground mb-3">Período</h3>
+            <p className="text-muted-foreground">
               Septiembre - Diciembre 2026<br />
               Implementación de procesos ITIL 4 en la Unidad de TI
             </p>
@@ -84,13 +84,13 @@ export function InicioSection() {
 
 export function OrganizacionSection() {
   return (
-    <section id="organizacion" className="min-h-screen bg-white py-20 scroll-mt-20">
+    <section id="organizacion" className="min-h-screen bg-background py-20 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Datos de la Organización
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Información general del proyecto y estructura organizacional
           </p>
         </div>
@@ -104,10 +104,10 @@ export function OrganizacionSection() {
             />
           </div>
           <div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">
+            <h3 className="text-3xl font-bold text-foreground mb-6">
               Estructura del Proyecto
             </h3>
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-muted-foreground mb-6">
               El proyecto está estructurado bajo los lineamientos del PMBOK 6ta Edición,
               garantizando una gestión profesional y orientada a resultados medibles.
             </p>
@@ -117,8 +117,8 @@ export function OrganizacionSection() {
                   <Building2 className="text-blue-600" size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-900">Organización Ejecutora</h4>
-                  <p className="text-gray-700">Hospital Central Comunitario</p>
+                  <h4 className="font-bold text-foreground">Organización Ejecutora</h4>
+                  <p className="text-muted-foreground">Hospital Central Comunitario</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -126,8 +126,8 @@ export function OrganizacionSection() {
                   <Target className="text-green-600" size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-900">Área de Enfoque</h4>
-                  <p className="text-gray-700">Servicios Sociales y Apoyo Comunitario</p>
+                  <h4 className="font-bold text-foreground">Área de Enfoque</h4>
+                  <p className="text-muted-foreground">Servicios Sociales y Apoyo Comunitario</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -135,8 +135,8 @@ export function OrganizacionSection() {
                   <DollarSign className="text-purple-600" size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-900">Presupuesto Aprobado</h4>
-                  <p className="text-gray-700">$250,000 USD</p>
+                  <h4 className="font-bold text-foreground">Presupuesto Aprobado</h4>
+                  <p className="text-muted-foreground">$250,000 USD</p>
                 </div>
               </div>
             </div>
@@ -144,46 +144,46 @@ export function OrganizacionSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-200 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Datos Generales</h3>
+          <div className="bg-gradient-to-br from-blue-50 to-background border border-blue-200 rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-foreground mb-6">Datos Generales</h3>
             <div className="space-y-4">
               <div>
-                <div className="text-sm font-semibold text-gray-600 mb-1">Nombre del Proyecto</div>
-                <div className="text-gray-900">Programa de Atención Social Hospitalaria Integral</div>
+                <div className="text-sm font-semibold text-muted-foreground mb-1">Nombre del Proyecto</div>
+                <div className="text-foreground">Programa de Atención Social Hospitalaria Integral</div>
               </div>
               <div>
-                <div className="text-sm font-semibold text-gray-600 mb-1">Código del Proyecto</div>
-                <div className="text-gray-900">PASH-2026-001</div>
+                <div className="text-sm font-semibold text-muted-foreground mb-1">Código del Proyecto</div>
+                <div className="text-foreground">PASH-2026-001</div>
               </div>
               <div>
-                <div className="text-sm font-semibold text-gray-600 mb-1">Fecha de Inicio</div>
-                <div className="text-gray-900">01 de Mayo de 2026</div>
+                <div className="text-sm font-semibold text-muted-foreground mb-1">Fecha de Inicio</div>
+                <div className="text-foreground">01 de Mayo de 2026</div>
               </div>
               <div>
-                <div className="text-sm font-semibold text-gray-600 mb-1">Fecha de Finalización</div>
-                <div className="text-gray-900">31 de Octubre de 2026</div>
+                <div className="text-sm font-semibold text-muted-foreground mb-1">Fecha de Finalización</div>
+                <div className="text-foreground">31 de Octubre de 2026</div>
               </div>
               <div>
-                <div className="text-sm font-semibold text-gray-600 mb-1">Duración</div>
-                <div className="text-gray-900">6 meses (184 días)</div>
+                <div className="text-sm font-semibold text-muted-foreground mb-1">Duración</div>
+                <div className="text-foreground">6 meses (184 días)</div>
               </div>
               <div>
-                <div className="text-sm font-semibold text-gray-600 mb-1">Estado</div>
-                <div className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+                <div className="text-sm font-semibold text-muted-foreground mb-1">Estado</div>
+                <div className="inline-block bg-green-100 dark:bg-green-950/40 text-green-800 dark:text-green-200 px-3 py-1 rounded-full text-sm font-semibold">
                   En Planificación
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-50 to-white border border-purple-200 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Objetivos Estratégicos</h3>
+          <div className="bg-gradient-to-br from-purple-50 dark:from-purple-950 to-background border border-purple-200 rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-foreground mb-6">Objetivos Estratégicos</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <div className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1">
                   1
                 </div>
-                <p className="text-gray-700">
+                <p className="text-muted-foreground">
                   Atender a 500 pacientes vulnerables en 6 meses con servicios de navegación de pacientes
                 </p>
               </li>
@@ -191,7 +191,7 @@ export function OrganizacionSection() {
                 <div className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1">
                   2
                 </div>
-                <p className="text-gray-700">
+                <p className="text-muted-foreground">
                   Alcanzar un 95% de satisfacción en encuestas de calidad de servicio
                 </p>
               </li>
@@ -199,7 +199,7 @@ export function OrganizacionSection() {
                 <div className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1">
                   3
                 </div>
-                <p className="text-gray-700">
+                <p className="text-muted-foreground">
                   Reducir en 30% los tiempos de espera para acceso a servicios sociales
                 </p>
               </li>
@@ -207,7 +207,7 @@ export function OrganizacionSection() {
                 <div className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1">
                   4
                 </div>
-                <p className="text-gray-700">
+                <p className="text-muted-foreground">
                   Establecer alianzas con al menos 10 organizaciones comunitarias
                 </p>
               </li>
@@ -271,13 +271,13 @@ export function EquipoSection() {
   ];
 
   return (
-    <section id="equipo" className="min-h-screen bg-gradient-to-b from-white to-blue-50 py-20 scroll-mt-20">
+    <section id="equipo" className="min-h-screen bg-gradient-to-b from-background dark:from-background dark:to-blue-950 to-blue-50 py-20 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Equipo del Proyecto
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Un equipo multidisciplinario con experiencia en gestión de proyectos y atención en salud
           </p>
         </div>
@@ -285,31 +285,31 @@ export function EquipoSection() {
         {/* Sección "Estructura del Equipo" comentada
         <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
           <div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">
+            <h3 className="text-3xl font-bold text-foreground mb-6">
               Estructura del Equipo
             </h3>
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-muted-foreground mb-6">
               Nuestro equipo combina expertise clínica con certificaciones en gestión de proyectos,
               asegurando tanto la excelencia técnica como la eficiencia operativa.
             </p>
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h4 className="font-bold text-gray-900 mb-4">Certificaciones del Equipo</h4>
+            <div className="bg-card border border-border rounded-xl p-6">
+              <h4 className="font-bold text-foreground mb-4">Certificaciones del Equipo</h4>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                  <span className="text-gray-700">4 PMP Certificados</span>
+                  <span className="text-muted-foreground">4 PMP Certificados</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                  <span className="text-gray-700">3 Médicos Licenciados</span>
+                  <span className="text-muted-foreground">3 Médicos Licenciados</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
-                  <span className="text-gray-700">2 MPH (Salud Pública)</span>
+                  <span className="text-muted-foreground">2 MPH (Salud Pública)</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-yellow-600 rounded-full"></div>
-                  <span className="text-gray-700">1 Six Sigma Black Belt</span>
+                  <span className="text-muted-foreground">1 Six Sigma Black Belt</span>
                 </div>
               </div>
             </div>
@@ -328,7 +328,7 @@ export function EquipoSection() {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+              className="bg-card rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-border"
             >
               <div className="p-6">
                 <div className="flex flex-col md:flex-row md:items-center gap-4">
@@ -337,11 +337,11 @@ export function EquipoSection() {
                       <Users className="text-white" size={28} />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
+                      <h3 className="text-xl font-bold text-foreground">{member.name}</h3>
                       <p className="text-blue-600 font-semibold">{member.role}</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Mail size={16} className="flex-shrink-0" />
                     <a href={`mailto:${member.email}`} className="hover:text-blue-600">
                       {member.email}

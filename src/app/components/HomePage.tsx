@@ -63,15 +63,15 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* Mission Section - Desktop */}
-      <section className="hidden md:block py-20 bg-white">
+      <section className="hidden md:block py-20 bg-card">
         <div className="max-w-7xl mx-auto px-8 grid grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
-            <p className="text-lg text-gray-700 mb-4">
+            <h2 className="text-4xl font-bold text-foreground mb-6">Our Mission</h2>
+            <p className="text-lg text-muted-foreground mb-4">
               We are committed to improving patient care and community health through structured
               project management methodologies.
             </p>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-muted-foreground">
               Using PMBOK standards, we ensure every aspect of our social project is planned,
               executed, and monitored for maximum impact.
             </p>
@@ -87,9 +87,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* Mission Section - Mobile */}
-      <section className="md:hidden py-12 bg-white">
+      <section className="md:hidden py-12 bg-card">
         <div className="px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-4">Our Mission</h2>
           <div className="relative h-64 rounded-xl overflow-hidden shadow-lg mb-6">
             <img
               src={imgMobile2}
@@ -97,11 +97,11 @@ export function HomePage({ onNavigate }: HomePageProps) {
               className="w-full h-full object-cover"
             />
           </div>
-          <p className="text-base text-gray-700 mb-3">
+          <p className="text-base text-muted-foreground mb-3">
             We are committed to improving patient care and community health through structured
             project management methodologies.
           </p>
-          <p className="text-base text-gray-700">
+          <p className="text-base text-muted-foreground">
             Using PMBOK standards, we ensure every aspect of our social project is planned,
             executed, and monitored for maximum impact.
           </p>
@@ -109,28 +109,28 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* Impact Section - Desktop */}
-      <section className="hidden md:block py-20 bg-blue-50">
+      <section className="hidden md:block py-20 bg-blue-50 dark:bg-blue-950/30">
         <div className="max-w-7xl mx-auto px-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Project Impact</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-12 text-center">Project Impact</h2>
           <div className="grid grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg">
+            <div className="bg-card p-8 rounded-xl shadow-lg">
               <div className="text-5xl font-bold text-blue-600 mb-4">2,500+</div>
-              <div className="text-xl text-gray-900 mb-2">Patients Served</div>
-              <p className="text-gray-600">
+              <div className="text-xl text-foreground mb-2">Patients Served</div>
+              <p className="text-muted-foreground">
                 Direct beneficiaries of our social care programs
               </p>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
+            <div className="bg-card p-8 rounded-xl shadow-lg">
               <div className="text-5xl font-bold text-blue-600 mb-4">15</div>
-              <div className="text-xl text-gray-900 mb-2">Active Programs</div>
-              <p className="text-gray-600">
+              <div className="text-xl text-foreground mb-2">Active Programs</div>
+              <p className="text-muted-foreground">
                 Initiatives managed using PMBOK framework
               </p>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
+            <div className="bg-card p-8 rounded-xl shadow-lg">
               <div className="text-5xl font-bold text-blue-600 mb-4">98%</div>
-              <div className="text-xl text-gray-900 mb-2">Satisfaction Rate</div>
-              <p className="text-gray-600">
+              <div className="text-xl text-foreground mb-2">Satisfaction Rate</div>
+              <p className="text-muted-foreground">
                 Patient and community feedback score
               </p>
             </div>
@@ -150,7 +150,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => onNavigate('methodology')}
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-colors"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-colors"
             >
               Explore Methodology
             </button>

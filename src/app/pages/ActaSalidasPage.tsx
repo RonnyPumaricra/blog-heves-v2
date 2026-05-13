@@ -13,21 +13,21 @@ export default function ActaSalidasPage() {
       />
 
       <section className="mb-12">
-        <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-lg mb-6">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+        <div className="bg-purple-50 dark:bg-purple-950/40 dark:border-purple-400 border-l-4 border-purple-600 p-6 rounded-r-lg mb-6">
+          <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
             <FileCheck className="text-purple-600" size={24} />
             Salidas
           </h2>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-lg p-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">
+        <div className="bg-card border border-border rounded-lg p-6">
+          <h3 className="text-xl font-bold text-foreground mb-4">
             Acta de Constitución del Proyecto
           </h3>
-          <p className="text-gray-700 mb-4">
+          <p className="text-muted-foreground mb-4">
             Documento formal que contiene toda la información descrita anteriormente y que:
           </p>
-          <ul className="space-y-3 text-gray-700">
+          <ul className="space-y-3 text-muted-foreground">
             <li className="flex items-start gap-2">
               <CheckCircle className="text-purple-600 flex-shrink-0 mt-1" size={18} />
               <span><strong>Autoriza formalmente el proyecto</strong> y su existencia dentro de la organización</span>
@@ -50,8 +50,8 @@ export default function ActaSalidasPage() {
             </li>
           </ul>
 
-          <div className="mt-6 p-4 bg-purple-50 rounded-lg">
-            <p className="text-sm text-gray-700">
+          <div className="mt-6 p-4 bg-purple-50 dark:bg-purple-950/30 rounded-lg">
+            <p className="text-sm text-muted-foreground">
               <strong>Nota:</strong> El Acta de Constitución debe ser firmada por el patrocinador
               del proyecto antes de proceder a la planificación detallada.
             </p>
