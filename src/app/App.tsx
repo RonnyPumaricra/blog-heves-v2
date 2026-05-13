@@ -4,7 +4,7 @@ import { Navigation } from './components/Navigation';
 import { Sidebar } from './components/Sidebar';
 import { InicioSection, OrganizacionSection, EquipoSection } from './components/MainSections';
 import ActaEntradasPage from './pages/ActaEntradasPage';
-import ActaContenidoPage from './pages/ActaContenidoPage';
+import ActaHerramientasPage from './pages/ActaHerramientasPage';
 import ActaSalidasPage from './pages/ActaSalidasPage';
 import InteresadosEntradasPage from './pages/InteresadosEntradasPage';
 import InteresadosHerramientasPage from './pages/InteresadosHerramientasPage';
@@ -106,10 +106,10 @@ export default function App() {
               </div>
             </section>
           } />
-          <Route path="/acta/contenido" element={
+          <Route path="/acta/herramientas" element={
             <section className="bg-muted/50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md:px-12">
-                <ActaContenidoPage />
+                <ActaHerramientasPage />
               </div>
             </section>
           } />
