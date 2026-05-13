@@ -1,5 +1,5 @@
 import { FileText, Settings, FileSpreadsheet, CheckCircle, AlertTriangle, Clock } from 'lucide-react';
-import { PageTitle, HerramientaRecopilacionDatos } from '../components/sections';
+import { PageTitle, HerramientaRecopilacionDatos, HerramientaRepresentacionDatos } from '../components/sections';
 
 function PendingSection({ number, title, children, noteText }: {
   number: string;
@@ -133,47 +133,7 @@ export default function ActaHerramientasPage() {
             </div>
           </HerramientaRecopilacionDatos>
 
-          <div className="bg-card border border-border rounded-lg p-6">
-            <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
-              <FileText className="text-blue-600 flex-shrink-0" size={22} />
-              2. Análisis de Datos
-            </h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold text-foreground mb-2">Análisis de Interesados</h4>
-                <p className="text-muted-foreground text-sm mb-3">
-                  Identificación sistemática de información sobre interesados:
-                </p>
-                <div className="bg-blue-50 dark:bg-blue-950/30 p-4 rounded-lg">
-                  <h5 className="font-semibold text-foreground mb-2">Matriz Poder/Interés</h5>
-                  <div className="grid grid-cols-2 gap-3 text-sm">
-                    <div className="bg-white p-3 rounded border-2 border-red-400">
-                      <strong>Alto Poder / Alto Interés</strong>
-                      <p className="text-muted-foreground mt-1">Gestionar de cerca (ej: Directorio Hospital)</p>
-                    </div>
-                    <div className="bg-white p-3 rounded border-2 border-yellow-400">
-                      <strong>Alto Poder / Bajo Interés</strong>
-                      <p className="text-muted-foreground mt-1">Mantener satisfecho (ej: Autoridades de salud)</p>
-                    </div>
-                    <div className="bg-white p-3 rounded border-2 border-green-400">
-                      <strong>Bajo Poder / Alto Interés</strong>
-                      <p className="text-muted-foreground mt-1">Mantener informado (ej: Pacientes, familias)</p>
-                    </div>
-                    <div className="bg-white p-3 rounded border-2 border-border">
-                      <strong>Bajo Poder / Bajo Interés</strong>
-                      <p className="text-muted-foreground mt-1">Monitorear (ej: Público general)</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-2">Análisis de Documentos</h4>
-                <p className="text-muted-foreground text-sm">
-                  Revisión de convenios, acuerdos y documentación existente para identificar interesados adicionales.
-                </p>
-              </div>
-            </div>
-          </div>
+          <HerramientaRepresentacionDatos idx={2} />
         </div>
       </section>
     </div>

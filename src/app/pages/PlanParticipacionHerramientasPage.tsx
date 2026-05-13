@@ -81,7 +81,10 @@ export default function PlanParticipacionHerramientasPage() {
             ]}
           />
 
-          <PendingSection number="3" title="Análisis de Datos">
+          <div className="bg-card border border-border rounded-lg p-6">
+            <h3 className="text-xl font-bold text-foreground mb-3">
+              3. Análisis de Datos
+            </h3>
             <p className="text-muted-foreground mb-3">
               Evaluar el nivel actual y deseado de participación:
             </p>
@@ -89,7 +92,7 @@ export default function PlanParticipacionHerramientasPage() {
               <li>• <strong>Análisis de Supuestos y Restricciones:</strong> Identificar supuestos sobre la disponibilidad y disposición de los interesados</li>
               <li>• <strong>Análisis de Documentos:</strong> Revisar documentación existente para comprender las relaciones con interesados</li>
             </ul>
-          </PendingSection>
+          </div>
 
           <PendingSection number="4" title="Toma de Decisiones">
             <p className="text-muted-foreground mb-3">
@@ -101,14 +104,7 @@ export default function PlanParticipacionHerramientasPage() {
             </ul>
           </PendingSection>
 
-          <HerramientaRepresentacionDatos title="5. Representación de Datos">
-            <div className="mt-4 bg-indigo-50 dark:bg-indigo-950/30 dark:border-indigo-400/30 border border-indigo-200 rounded-lg p-4">
-              <p className="text-sm text-indigo-800 dark:text-indigo-200">
-                <strong>Matriz de Evaluación de Participación:</strong><br />
-                Niveles de participación actual vs. deseado: <strong>Desconocido, Reacio, Neutral, Favorable y Líder.</strong>
-              </p>
-            </div>
-          </HerramientaRepresentacionDatos>
+          <HerramientaRepresentacionDatos idx={5} />
 
           <HerramientaReuniones
             title="6. Reuniones"
