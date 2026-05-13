@@ -12,6 +12,8 @@ import InteresadosSalidasPage from './pages/InteresadosSalidasPage';
 import PlanParticipacionEntradasPage from './pages/PlanParticipacionEntradasPage';
 import PlanParticipacionHerramientasPage from './pages/PlanParticipacionHerramientasPage';
 import PlanParticipacionSalidasPage from './pages/PlanParticipacionSalidasPage';
+import ArbolProblemasPage from './pages/ArbolProblemasPage';
+import ArbolObjetivosPage from './pages/ArbolObjetivosPage';
 
 export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -157,6 +159,20 @@ export default function App() {
             <section className="bg-gray-50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <PlanParticipacionSalidasPage />
+              </div>
+            </section>
+          } />
+          <Route path="/eml/arbol-problemas" element={
+            <section className="bg-gray-50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <ArbolProblemasPage />
+              </div>
+            </section>
+          } />
+          <Route path="/eml/arbol-objetivos" element={
+            <section className="bg-gray-50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <ArbolObjetivosPage />
               </div>
             </section>
           } />

@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronRight, FileText, Users, ClipboardList } from 'lucide-react';
+import { ChevronDown, ChevronRight, FileText, Users, ClipboardList, GitBranch } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 import { useState } from 'react';
 
@@ -7,7 +7,7 @@ interface SidebarProps {
 }
 
 export function Sidebar({ isOpen }: SidebarProps) {
-  const [expandedItems, setExpandedItems] = useState<string[]>(['interesados', 'plan-participacion']);
+  const [expandedItems, setExpandedItems] = useState<string[]>(['interesados', 'plan-participacion', 'eml']);
   const location = useLocation();
 
   const toggleExpanded = (item: string) => {
@@ -49,6 +49,16 @@ export function Sidebar({ isOpen }: SidebarProps) {
         { id: 'plan-participacion-herramientas', label: 'Herramientas y Técnicas', path: '/plan-participacion/herramientas' },
         { id: 'plan-participacion-salidas', label: 'Salidas', path: '/plan-participacion/salidas' }
       ]
+    },
+    {
+      id: 'eml',
+      title: 'Enfoque de Marco Lógico',
+      icon: GitBranch,
+      path: '/eml/arbol-problemas',
+      children: [
+        { id: 'eml-arbol-problemas', label: 'Árbol de Problemas', path: '/eml/arbol-problemas' },
+        { id: 'eml-arbol-objetivos', label: 'Árbol de Objetivos', path: '/eml/arbol-objetivos' }
+      ]
     }
   ];
 
@@ -77,6 +87,8 @@ export function Sidebar({ isOpen }: SidebarProps) {
               Gestión de Proyectos Hospitalarios
             </p>
           </div>
+
+          <div className="border-t border-gray-200 my-4" />
 
           <nav className="space-y-2">
             {menuItems.map((item) => {
