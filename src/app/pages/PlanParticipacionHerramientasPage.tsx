@@ -73,13 +73,7 @@ export default function PlanParticipacionHerramientasPage() {
             ]}
           />
 
-          <HerramientaRecopilacionDatos
-            title="2. Recopilación de Datos"
-            items={[
-              { tool: 'Cuestionarios y Encuestas', description: 'Recopilar expectativas y necesidades de los interesados de manera sistemática.' },
-              { tool: 'Entrevistas', description: 'Conversaciones directas con interesados clave para comprender su nivel de participación actual y deseado.' },
-            ]}
-          />
+          <HerramientaRecopilacionDatos idx={2} />
 
           <div className="bg-card border border-border rounded-lg p-6">
             <h3 className="text-xl font-bold text-foreground mb-3">
