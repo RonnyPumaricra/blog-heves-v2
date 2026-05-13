@@ -100,6 +100,6 @@
   | `<EntradaActivosProcesosHEVES />` | mismo archivo | — (ficha PS05 con tablas) |
   | `<HerramientaJuicioExpertos />` | `sections/tools/HerramientasCompartidas.tsx` | `title?`, `items?` |
   | `<HerramientaRecopilacionDatos />` | mismo archivo | `title?`, `items?`, `children?` |
-  | `<HerramientaRepresentacionDatos />` | mismo archivo | `title?`, `children?` |
+  | `<HerramientaRepresentacionDatos />` | mismo archivo | `idx: number` |
   | `<HerramientaReuniones />` | mismo archivo | `title?`, `items?` |
   

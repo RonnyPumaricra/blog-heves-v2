@@ -447,7 +447,7 @@ function IdentificarInteresados({ section }: { section: string }) {
               </div>
             </div>
 
-            <HerramientaRepresentacionDatos />
+            <HerramientaRepresentacionDatos idx={4} />
 
             <HerramientaReuniones />
           </div>
@@ -734,7 +734,7 @@ function PlanParticipacionInteresados({ section }: { section: string }) {
               </ul>
             </div>
 
-            <HerramientaRepresentacionDatos title="5. Representación de Datos" />
+            <HerramientaRepresentacionDatos idx={5} />
 
             <HerramientaReuniones title="6. Reuniones" items={['• Definir estrategias de participación para cada interesado clave', '• Identificar barreras y oportunidades de involucramiento', '• Establecer cronogramas de comunicación y participación', '• Asignar responsabilidades para la gestión de interesados']} />
           </div>

@@ -1,24 +1,14 @@
 import { SectionCard } from '../SectionCard'
+import { HerramientaMatrizPoderInteres } from './HerramientaMatrizPoderInteres'
 
 interface Props {
-  title?: string
-  children?: React.ReactNode
+  idx: number
 }
 
-export function HerramientaRepresentacionDatos({ title = 'Representación de Datos', children }: Props) {
+export function HerramientaRepresentacionDatos({ idx }: Props) {
   return (
-    <SectionCard title={title}>
-      <h4>Mapas Mentales</h4>
-      <p>Representación visual de las relaciones entre interesados y el proyecto.</p>
-      <h4>Grillas de Clasificación de Interesados</h4>
-      <p>Clasificación según múltiples dimensiones:</p>
-      <ul>
-        <li>• Nivel de poder / influencia</li>
-        <li>• Nivel de interés / impacto</li>
-        <li>• Actitud (partidario, neutral, opositor)</li>
-        <li>• Urgencia de necesidades</li>
-      </ul>
-      {children}
+    <SectionCard title={`${idx}. Representación de Datos`}>
+      <HerramientaMatrizPoderInteres />
     </SectionCard>
   )
 }
