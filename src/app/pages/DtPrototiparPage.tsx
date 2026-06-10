@@ -1,8 +1,69 @@
 import { useState } from 'react';
 import { Layers } from 'lucide-react';
 import { PageTitle } from '../components/sections';
+import esc01 from '@/assets/esc_01.png';
+import esc02 from '@/assets/esc_02.png';
+import esc03 from '@/assets/esc_03.png';
+import esc04 from '@/assets/esc_04.png';
+import esc05 from '@/assets/esc_05.png';
+import esc06 from '@/assets/esc_06.png';
 
 type PhoneView = 'qr' | 'form' | 'success';
+
+type SceneState = 'AS-IS' | 'TO-BE';
+
+interface Scene {
+  id: number;
+  title: string;
+  text: string;
+  img: string;
+  state: SceneState;
+}
+
+const SCENES: Scene[] = [
+  {
+    id: 1,
+    title: 'Fase 1: Frustración Asistencial en UCI',
+    text: 'El sistema SISGalenPlus se congela por completo en la terminal PC-UCI-CAMA04 dentro del área de cuidados críticos. El médico de guardia muestra una profunda frustración al verse imposibilitado de registrar las recetas médicas electrónicas o consultar el historial clínico en medio del acto médico inmediato.',
+    img: esc01,
+    state: 'AS-IS',
+  },
+  {
+    id: 2,
+    title: 'Fase 2: El Bypass por Canales Informales',
+    text: 'Ante el bloqueo del sistema clínico y la ausencia de un canal técnico visible o inmediato, el médico recurre a su smartphone personal para enviarle un mensaje de WhatsApp a un técnico de la UTI que conoce. Este método genera una pérdida absoluta de trazabilidad y gobernanza del incidente.',
+    img: esc02,
+    state: 'AS-IS',
+  },
+  {
+    id: 3,
+    title: 'Fase 3: Saturación y Punto Ciego en la UTI',
+    text: 'En la central de la Unidad de Tecnologías de la Información, los técnicos operan colapsados actuando como «bomberos» ante llamadas telefónicas y fallos físicos administrativos sin orden de prioridad médica. El mensaje informal de WhatsApp queda oculto en el olvido, imposibilitando que la jefa Paola Llave o el OCI capturen métricas reales.',
+    img: esc03,
+    state: 'AS-IS',
+  },
+  {
+    id: 4,
+    title: 'Fase 4: Activación mediante Códigos QR Oficiales',
+    text: 'Bajo la nueva arquitectura del subproceso PS05.03, el médico nota una etiqueta física con un Código QR oficial de soporte pegada en el monitor. Al escanearla con su celular, el sistema lo identifica e inicia sesión automáticamente a través de la integración LDAP con el Active Directory institucional, eliminando logins manuales molestos.',
+    img: esc04,
+    state: 'TO-BE',
+  },
+  {
+    id: 5,
+    title: 'Fase 5: Formulario Simplificado e Inteligencia de SLAs',
+    text: 'El smartphone abre el micro-portal móvil reactivo limitado a un máximo de 3 campos obligatorios. Al seleccionar el fallo del sistema, el motor de reglas de negocio configurado en el Sandbox de GLPI detecta automáticamente la ubicación crítica de UCI y autocalcula un SLA prioritario coercitivo de menos de 15 minutos en base a la RS N° 063-2020-MINSA.',
+    img: esc05,
+    state: 'TO-BE',
+  },
+  {
+    id: 6,
+    title: 'Fase 6: Gobernanza Digital y Control de Calidad Exitoso',
+    text: 'El ticket inyectado dispara una sirena sonora intermitente en la consola central de la UTI, alertando al especialista para resolver la avería a tiempo. Al finalizar el mes, el sistema extrae automáticamente reportes inmutables y tableros limpios directos de MariaDB, blindando la gestión de la jefatura ante auditorías preventivas del Órgano de Control Institucional (OCI).',
+    img: esc06,
+    state: 'TO-BE',
+  },
+];
 
 const SYSTEMS = [
   { value: 'SISGalenPlus', label: 'Sistemas Clínicos SISGalenPlus' },
@@ -18,6 +79,7 @@ const PHONE_HEADER: Record<PhoneView, string> = {
 };
 
 export default function DtPrototiparPage() {
+  const [currentScene, setCurrentScene]   = useState(1);
   const [phoneView, setPhoneView]         = useState<PhoneView>('qr');
   const [selectedSystem, setSelectedSystem] = useState('');
   const [priority, setPriority]           = useState<'Alta' | 'Media'>('Alta');
@@ -332,6 +394,94 @@ Atributos:
               </tr>
             </tbody>
           </table>
+        </div>
+
+        {/* ── Sección 3: Storyboard ── */}
+        <div className="border-l-4 border-l-sky-500 pl-3 mb-4 mt-10">
+          <h2 className="text-base font-bold text-foreground uppercase tracking-wide">
+            3. Guion Gráfico Interactivo (Storyboard)
+          </h2>
+        </div>
+        <p className="text-sm text-muted-foreground mb-6 text-justify">
+          Secuencia visual del flujo del Subproceso <strong>PS05.03 — Gestión de Incidentes de Servicios TI HEVES</strong>.
+          Las escenas <strong>AS-IS</strong> documentan la problemática actual; las escenas <strong>TO-BE</strong> ilustran
+          el flujo optimizado tras la implementación del sistema GLPI. Código de documento:&nbsp;
+          <span className="font-mono text-xs">UNTELS-HEVES-ITSM-STB-05.2 · v7.0 · Junio 2026</span>.
+        </p>
+
+        <div className="bg-muted/30 dark:bg-slate-900/30 border border-border rounded-2xl p-6">
+          {/* Carrusel */}
+          <div className="relative">
+            {/* Imagen */}
+            <div className="relative w-full overflow-hidden rounded-xl border border-border bg-slate-100 dark:bg-slate-800 shadow-inner">
+              <img
+                key={currentScene}
+                src={SCENES[currentScene - 1].img}
+                alt={SCENES[currentScene - 1].title}
+                className="w-full object-cover"
+                style={{ maxHeight: '480px', objectPosition: 'top' }}
+              />
+              {/* Badge de escena */}
+              <span className="absolute top-3 left-3 bg-slate-900 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow">
+                Escena {currentScene} de {SCENES.length}
+              </span>
+              {/* Badge AS-IS / TO-BE */}
+              <span className={`absolute top-3 right-3 text-[11px] font-bold px-3 py-1 rounded-full shadow uppercase border ${
+                SCENES[currentScene - 1].state === 'AS-IS'
+                  ? 'bg-red-100 text-red-800 border-red-200 dark:bg-red-950/40 dark:text-red-300 dark:border-red-800'
+                  : 'bg-green-100 text-green-800 border-green-200 dark:bg-green-950/40 dark:text-green-300 dark:border-green-800'
+              }`}>
+                {SCENES[currentScene - 1].state}
+              </span>
+            </div>
+
+            {/* Descripción */}
+            <div className="mt-4 border-l-4 border-l-sky-500 pl-4 py-3 bg-card border border-border rounded-r-xl">
+              <p className="text-[13.5px] font-bold text-foreground mb-1 uppercase tracking-wide">
+                {SCENES[currentScene - 1].title}
+              </p>
+              <p className="text-[13px] text-muted-foreground leading-relaxed text-justify">
+                {SCENES[currentScene - 1].text}
+              </p>
+            </div>
+          </div>
+
+          {/* Controles de navegación */}
+          <div className="flex items-center justify-between mt-5 gap-3">
+            <button
+              onClick={() => setCurrentScene(s => Math.max(1, s - 1))}
+              disabled={currentScene === 1}
+              className="px-5 py-2.5 bg-slate-900 text-white text-[13px] font-semibold rounded-md shadow transition-all hover:bg-slate-700 disabled:bg-border disabled:text-muted-foreground disabled:cursor-not-allowed disabled:shadow-none"
+            >
+              ◀ Escena Anterior
+            </button>
+            <span className="text-[13px] font-bold text-muted-foreground bg-muted px-5 py-2 rounded-full">
+              {currentScene} / {SCENES.length}
+            </span>
+            <button
+              onClick={() => setCurrentScene(s => Math.min(SCENES.length, s + 1))}
+              disabled={currentScene === SCENES.length}
+              className="px-5 py-2.5 bg-slate-900 text-white text-[13px] font-semibold rounded-md shadow transition-all hover:bg-slate-700 disabled:bg-border disabled:text-muted-foreground disabled:cursor-not-allowed disabled:shadow-none"
+            >
+              Siguiente Escena ▶
+            </button>
+          </div>
+
+          {/* Miniaturas de puntos */}
+          <div className="flex justify-center gap-2 mt-4">
+            {SCENES.map(s => (
+              <button
+                key={s.id}
+                onClick={() => setCurrentScene(s.id)}
+                className={`w-2.5 h-2.5 rounded-full transition-all ${
+                  s.id === currentScene
+                    ? 'bg-sky-500 scale-125'
+                    : 'bg-border hover:bg-sky-300'
+                }`}
+                aria-label={`Ir a escena ${s.id}`}
+              />
+            ))}
+          </div>
         </div>
 
       </div>
