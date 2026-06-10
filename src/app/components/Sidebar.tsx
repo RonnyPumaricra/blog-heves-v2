@@ -59,7 +59,8 @@ export function Sidebar({ isOpen }: SidebarProps) {
         { id: 'eml-arbol-problemas', label: 'Árbol de Problemas', path: '/eml/arbol-problemas' },
         { id: 'eml-arbol-objetivos', label: 'Árbol de Objetivos', path: '/eml/arbol-objetivos' },
         { id: 'eml-analisis-alternativas', label: 'Análisis de Alternativas', path: '/eml/analisis-alternativas' },
-        { id: 'eml-matriz-marco-logico', label: 'Matriz de Marco Lógico', path: '/eml/matriz-marco-logico' }
+        { id: 'eml-matriz-marco-logico', label: 'Matriz de Marco Lógico', path: '/eml/matriz-marco-logico' },
+        { id: 'eml-doble-diamante', label: 'Doble Diamante', path: '/eml/doble-diamante' }
       ]
     },
     {

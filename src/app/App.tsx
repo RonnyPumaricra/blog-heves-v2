@@ -16,6 +16,7 @@ import ArbolProblemasPage from './pages/ArbolProblemasPage';
 import ArbolObjetivosPage from './pages/ArbolObjetivosPage';
 import AnalisisAlternativasPage from './pages/AnalisisAlternativasPage';
 import MatrizMarcoLogicoPage from './pages/MatrizMarcoLogicoPage';
+import DobleDiamantePredictivoPage from './pages/DobleDiamantePredictivoPage';
 import DtEmpatizarPage from './pages/DtEmpatizarPage';
 import DtDefinirPage from './pages/DtDefinirPage';
 import DtIdearPage from './pages/DtIdearPage';
@@ -194,6 +195,13 @@ export default function App() {
             <section className="bg-muted/50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <MatrizMarcoLogicoPage />
+              </div>
+            </section>
+          } />
+          <Route path="/eml/doble-diamante" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <DobleDiamantePredictivoPage />
               </div>
             </section>
           } />
