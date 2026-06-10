@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronRight, FileText, Users, ClipboardList, GitBranch } from 'lucide-react';
+import { ChevronDown, ChevronRight, FileText, Users, ClipboardList, GitBranch, Lightbulb } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 import { useState } from 'react';
 
@@ -7,7 +7,7 @@ interface SidebarProps {
 }
 
 export function Sidebar({ isOpen }: SidebarProps) {
-  const [expandedItems, setExpandedItems] = useState<string[]>(['acta', 'interesados', 'plan-participacion', 'eml']);
+  const [expandedItems, setExpandedItems] = useState<string[]>(['acta', 'interesados', 'plan-participacion', 'eml', 'design-thinking']);
   const location = useLocation();
 
   const toggleExpanded = (item: string) => {
@@ -57,7 +57,22 @@ export function Sidebar({ isOpen }: SidebarProps) {
       path: '/eml/arbol-problemas',
       children: [
         { id: 'eml-arbol-problemas', label: 'Árbol de Problemas', path: '/eml/arbol-problemas' },
-        { id: 'eml-arbol-objetivos', label: 'Árbol de Objetivos', path: '/eml/arbol-objetivos' }
+        { id: 'eml-arbol-objetivos', label: 'Árbol de Objetivos', path: '/eml/arbol-objetivos' },
+        { id: 'eml-analisis-alternativas', label: 'Análisis de Alternativas', path: '/eml/analisis-alternativas' },
+        { id: 'eml-matriz-marco-logico', label: 'Matriz de Marco Lógico', path: '/eml/matriz-marco-logico' }
+      ]
+    },
+    {
+      id: 'design-thinking',
+      title: 'Design Thinking',
+      icon: Lightbulb,
+      path: '/design-thinking/empatizar',
+      children: [
+        { id: 'dt-empatizar', label: 'Empatizar', path: '/design-thinking/empatizar' },
+        { id: 'dt-definir', label: 'Definir', path: '/design-thinking/definir' },
+        { id: 'dt-idear', label: 'Idear', path: '/design-thinking/idear' },
+        { id: 'dt-prototipar', label: 'Prototipar', path: '/design-thinking/prototipar' },
+        { id: 'dt-evaluar', label: 'Evaluar', path: '/design-thinking/evaluar' }
       ]
     }
   ];

@@ -14,6 +14,13 @@ import PlanParticipacionHerramientasPage from './pages/PlanParticipacionHerramie
 import PlanParticipacionSalidasPage from './pages/PlanParticipacionSalidasPage';
 import ArbolProblemasPage from './pages/ArbolProblemasPage';
 import ArbolObjetivosPage from './pages/ArbolObjetivosPage';
+import AnalisisAlternativasPage from './pages/AnalisisAlternativasPage';
+import MatrizMarcoLogicoPage from './pages/MatrizMarcoLogicoPage';
+import DtEmpatizarPage from './pages/DtEmpatizarPage';
+import DtDefinirPage from './pages/DtDefinirPage';
+import DtIdearPage from './pages/DtIdearPage';
+import DtPrototiparPage from './pages/DtPrototiparPage';
+import DtEvaluarPage from './pages/DtEvaluarPage';
 
 export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -173,6 +180,55 @@ export default function App() {
             <section className="bg-muted/50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <ArbolObjetivosPage />
+              </div>
+            </section>
+          } />
+          <Route path="/eml/analisis-alternativas" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <AnalisisAlternativasPage />
+              </div>
+            </section>
+          } />
+          <Route path="/eml/matriz-marco-logico" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <MatrizMarcoLogicoPage />
+              </div>
+            </section>
+          } />
+          <Route path="/design-thinking/empatizar" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <DtEmpatizarPage />
+              </div>
+            </section>
+          } />
+          <Route path="/design-thinking/definir" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <DtDefinirPage />
+              </div>
+            </section>
+          } />
+          <Route path="/design-thinking/idear" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <DtIdearPage />
+              </div>
+            </section>
+          } />
+          <Route path="/design-thinking/prototipar" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <DtPrototiparPage />
+              </div>
+            </section>
+          } />
+          <Route path="/design-thinking/evaluar" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <DtEvaluarPage />
               </div>
             </section>
           } />
