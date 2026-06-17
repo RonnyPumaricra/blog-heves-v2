@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronRight, FileText, Users, ClipboardList, GitBranch, Lightbulb } from 'lucide-react';
+import { ChevronDown, ChevronRight, FileText, Users, ClipboardList, GitBranch, Lightbulb, Target, Network } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 import { useState } from 'react';
 
@@ -7,7 +7,7 @@ interface SidebarProps {
 }
 
 export function Sidebar({ isOpen }: SidebarProps) {
-  const [expandedItems, setExpandedItems] = useState<string[]>(['acta', 'interesados', 'plan-participacion', 'eml', 'design-thinking']);
+  const [expandedItems, setExpandedItems] = useState<string[]>(['acta', 'interesados', 'plan-participacion', 'eml', 'design-thinking', 'definir-alcance', 'crear-edt']);
   const location = useLocation();
 
   const toggleExpanded = (item: string) => {
@@ -61,6 +61,24 @@ export function Sidebar({ isOpen }: SidebarProps) {
         { id: 'eml-analisis-alternativas', label: 'Análisis de Alternativas', path: '/eml/analisis-alternativas' },
         { id: 'eml-matriz-marco-logico', label: 'Matriz de Marco Lógico', path: '/eml/matriz-marco-logico' },
         { id: 'eml-doble-diamante', label: 'Doble Diamante', path: '/eml/doble-diamante' }
+      ]
+    },
+    {
+      id: 'definir-alcance',
+      title: 'Definir el Alcance',
+      icon: Target,
+      path: '/definir-alcance/salidas',
+      children: [
+        { id: 'definir-alcance-salidas', label: 'Salidas', path: '/definir-alcance/salidas' }
+      ]
+    },
+    {
+      id: 'crear-edt',
+      title: 'Crear la EDT/WBS',
+      icon: Network,
+      path: '/crear-edt/salidas',
+      children: [
+        { id: 'crear-edt-salidas', label: 'Salidas', path: '/crear-edt/salidas' }
       ]
     },
     {

@@ -22,6 +22,8 @@ import DtDefinirPage from './pages/DtDefinirPage';
 import DtIdearPage from './pages/DtIdearPage';
 import DtPrototiparPage from './pages/DtPrototiparPage';
 import DtEvaluarPage from './pages/DtEvaluarPage';
+import DefinirAlcanceSalidasPage from './pages/DefinirAlcanceSalidasPage';
+import CrearEdtSalidasPage from './pages/CrearEdtSalidasPage';
 
 export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -237,6 +239,20 @@ export default function App() {
             <section className="bg-muted/50 py-12 min-h-screen">
               <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <DtEvaluarPage />
+              </div>
+            </section>
+          } />
+          <Route path="/definir-alcance/salidas" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <DefinirAlcanceSalidasPage />
+              </div>
+            </section>
+          } />
+          <Route path="/crear-edt/salidas" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <CrearEdtSalidasPage />
               </div>
             </section>
           } />
