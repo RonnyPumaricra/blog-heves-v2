@@ -24,6 +24,19 @@ import DtPrototiparPage from './pages/DtPrototiparPage';
 import DtEvaluarPage from './pages/DtEvaluarPage';
 import DefinirAlcanceSalidasPage from './pages/DefinirAlcanceSalidasPage';
 import CrearEdtSalidasPage from './pages/CrearEdtSalidasPage';
+import PlaceholderPage from './pages/PlaceholderPage';
+import CronogramaPlanGestionPage from './pages/CronogramaPlanGestionPage';
+import CronogramaActividadesPage from './pages/CronogramaActividadesPage';
+import CronogramaSecuenciacionPage from './pages/CronogramaSecuenciacionPage';
+import CronogramaPertPage from './pages/CronogramaPertPage';
+import CronogramaCpmPage from './pages/CronogramaCpmPage';
+import CronogramaGanttPage from './pages/CronogramaGanttPage';
+import {
+  ClipboardList,
+  ListChecks,
+  Table2,
+  BookOpen,
+} from 'lucide-react';
 
 export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -256,6 +269,142 @@ export default function App() {
               </div>
             </section>
           } />
+
+          {/* Gestión de Interesados (alias del Plan de Participación) */}
+          <Route path="/gestion-interesados/entradas" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <PlanParticipacionEntradasPage />
+              </div>
+            </section>
+          } />
+          <Route path="/gestion-interesados/herramientas" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <PlanParticipacionHerramientasPage />
+              </div>
+            </section>
+          } />
+          <Route path="/gestion-interesados/salidas" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <PlanParticipacionSalidasPage />
+              </div>
+            </section>
+          } />
+
+          {/* Alcance */}
+          <Route path="/alcance/plan-gestion" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <PlaceholderPage
+                  icon={ClipboardList}
+                  iconBgColor="bg-emerald-600"
+                  title="Plan de gestión de alcance"
+                  subtitle="Gestión del Alcance del Proyecto"
+                  description="Documento que describe cómo se definirá, validará y controlará el alcance del proyecto."
+                />
+              </div>
+            </section>
+          } />
+          <Route path="/alcance/requisitos" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <PlaceholderPage
+                  icon={ListChecks}
+                  iconBgColor="bg-emerald-600"
+                  title="Recopilación de requisitos"
+                  subtitle="Gestión del Alcance del Proyecto"
+                  description="Proceso de determinar, documentar y gestionar las necesidades y requisitos de los interesados."
+                />
+              </div>
+            </section>
+          } />
+          <Route path="/alcance/trazabilidad" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <PlaceholderPage
+                  icon={Table2}
+                  iconBgColor="bg-emerald-600"
+                  title="Matriz de trazabilidad de requisitos"
+                  subtitle="Gestión del Alcance del Proyecto"
+                  description="Cuadro que vincula los requisitos del producto con su origen y los rastrea a lo largo del ciclo de vida del proyecto."
+                />
+              </div>
+            </section>
+          } />
+          <Route path="/alcance/declaracion" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <DefinirAlcanceSalidasPage />
+              </div>
+            </section>
+          } />
+          <Route path="/alcance/edt" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <CrearEdtSalidasPage />
+              </div>
+            </section>
+          } />
+          <Route path="/alcance/diccionario" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <PlaceholderPage
+                  icon={BookOpen}
+                  iconBgColor="bg-emerald-600"
+                  title="Diccionario de la EDT"
+                  subtitle="Gestión del Alcance del Proyecto"
+                  description="Documento que proporciona información detallada sobre los entregables, actividades y programación de cada componente de la EDT."
+                />
+              </div>
+            </section>
+          } />
+
+          {/* Cronograma */}
+          <Route path="/cronograma/plan-gestion" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <CronogramaPlanGestionPage />
+              </div>
+            </section>
+          } />
+          <Route path="/cronograma/actividades" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <CronogramaActividadesPage />
+              </div>
+            </section>
+          } />
+          <Route path="/cronograma/secuenciacion" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <CronogramaSecuenciacionPage />
+              </div>
+            </section>
+          } />
+          <Route path="/cronograma/pert" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <CronogramaPertPage />
+              </div>
+            </section>
+          } />
+          <Route path="/cronograma/cpm" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <CronogramaCpmPage />
+              </div>
+            </section>
+          } />
+          <Route path="/cronograma/gantt" element={
+            <section className="bg-muted/50 py-12 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <CronogramaGanttPage />
+              </div>
+            </section>
+          } />
+
           <Route path="/" element={
             <>
               <InicioSection />
