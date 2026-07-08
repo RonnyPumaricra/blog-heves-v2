@@ -484,6 +484,26 @@ Atributos:
           </div>
         </div>
 
+        {/* ── Sección 4: Vídeo del prototipo ── */}
+        <div className="border-l-4 border-l-sky-500 pl-3 mb-4 mt-10">
+          <h2 className="text-base font-bold text-foreground uppercase tracking-wide">
+            4. Vídeo del Prototipo
+          </h2>
+        </div>
+        <p className="text-sm text-muted-foreground mb-6 text-justify">
+          Demostración en vídeo del flujo completo del subproceso <strong>PS05.03</strong> implementado
+          en el entorno Sandbox de GLPI, desde el escaneo del Código QR hasta el cierre del ticket.
+        </p>
+        <div className="bg-muted/30 dark:bg-slate-900/30 border border-border rounded-2xl p-6">
+          <video
+            controls
+            className="w-full rounded-xl border border-border shadow-md"
+            src="/video-prototipo.mp4"
+          >
+            Tu navegador no soporta la reproducción de vídeo.
+          </video>
+        </div>
+
       </div>
     </div>
   );
