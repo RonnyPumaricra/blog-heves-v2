@@ -14,7 +14,7 @@ const inclusiones = [
     ),
   },
   {
-    titulo: 'Diseño del Proceso TO-BE bajo ITIL 4',
+    titulo: 'Diseño del Proceso TO-BE bajo ITIL v3',
     descripcion: (
       <>
         Elaboración y modelado de las fichas de caracterización y flujogramas del nuevo subproceso
@@ -49,7 +49,7 @@ const inclusiones = [
     descripcion: (
       <>
         Dictado de talleres de sensibilización al personal de enfermería y médicos para mitigar la
-        resistencia al cambio, junto con entrenamiento técnico en ITIL 4 al equipo de la UTI.
+        resistencia al cambio, junto con entrenamiento técnico en ITIL v3 al equipo de la UTI.
       </>
     ),
   },
@@ -108,7 +108,7 @@ const criterios = [
   {
     titulo: 'Validación de Pruebas',
     descripcion:
-      'Importación exitosa de los usuarios del hospital mediante el mapeo LDAP conectado al Active Directory de pruebas del HEVES, comprobando la asignación automática de SLAs menores a 15 minutos en tickets críticos.',
+      'Importación exitosa de los usuarios del hospital mediante el mapeo LDAP conectado al Active Directory de pruebas del HEVES, comprobando la asignación automática de los Acuerdos de Nivel de Servicio (SLA) institucionales (menores a 15 minutos en tickets críticos).',
   },
 ];
 

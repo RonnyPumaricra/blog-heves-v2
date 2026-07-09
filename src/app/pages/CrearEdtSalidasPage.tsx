@@ -1,5 +1,6 @@
 import { Network, FileCheck, FolderOpen, BookOpen } from 'lucide-react';
 import { PageTitle } from '../components/sections';
+import { EdtDiagram } from '../components/EdtDiagram';
 
 const wbsRows = [
   { code: '1.0', label: 'GESTIÓN DEL PROYECTO', entregable: 'Paquete de Dirección Aprobado', level: 1 },
@@ -9,7 +10,7 @@ const wbsRows = [
   { code: '2.0', label: 'DIAGNÓSTICO Y MODELADO (AS-IS / TO-BE)', entregable: 'Expediente de Rediseño de Procesos', level: 1 },
   { code: '2.1', label: 'Levantamiento Empírico de Fallos en Sistemas Críticos', entregable: 'Informe Técnico de Diagnóstico AS-IS', level: 2 },
   { code: '2.2', label: 'Estructuración Causa-Efecto Institucional', entregable: 'Árbol de Problemas y Árbol de Objetivos', level: 2 },
-  { code: '2.3', label: 'Modelado de Procesos de Soporte ITIL 4', entregable: 'Ficha Técnica del Subproceso PS05.03', level: 2 },
+  { code: '2.3', label: 'Modelado de Procesos de Soporte ITIL v3', entregable: 'Ficha Técnica del Subproceso PS05.03', level: 2 },
   { code: '2.4', label: 'Evaluación y Selección Tecnológica', entregable: 'Matriz Multicriterio de Alternativas', level: 2 },
   { code: '3.0', label: 'CONFIGURACIÓN E IMPLEMENTACIÓN DE SOFTWARE', entregable: 'Sistema Piloto Funcional (Mesa de Ayuda)', level: 1 },
   { code: '3.1', label: 'Despliegue del Servidor Aislado Sandbox', entregable: 'Ubuntu Server 24.04 LTS + MariaDB Operativo', level: 2 },
@@ -18,7 +19,7 @@ const wbsRows = [
   { code: '3.4', label: 'Desarrollo de Interfaz de Reporte Rápido QR', entregable: 'Prototipo UX Móvil Interactivo (Canal de Tickets)', level: 2 },
   { code: '4.0', label: 'CAPACITACIÓN Y CONTROL DE CALIDAD', entregable: 'Actas de Validación Operativa', level: 1 },
   { code: '4.1', label: 'Estrategia de Mitigación de Resistencia Asistencial', entregable: 'Talleres de Sensibilización con Enfermería / Médicos', level: 2 },
-  { code: '4.2', label: 'Formación en Estándares de Gestión de Servicios', entregable: 'Plan de Capacitación ITIL 4 para la UTI', level: 2 },
+  { code: '4.2', label: 'Formación en Estándares de Gestión de Servicios', entregable: 'Plan de Capacitación ITIL v3 para la UTI', level: 2 },
   { code: '4.3', label: 'Pruebas de Aceptación de Software (QA)', entregable: 'Métricas e Indicadores PS05 Verificados', level: 2 },
   { code: '5.0', label: 'CIERRE DEL PROYECTO', entregable: 'Activos de los Procesos Enriquecidos', level: 1 },
   { code: '5.1', label: 'Consolidación del Conocimiento Adquirido', entregable: 'Registro Formal de Lecciones Aprendidas', level: 2 },
@@ -29,10 +30,10 @@ const wbsRows = [
 const dictItems = [
   {
     code: '2.3',
-    titulo: 'Modelado de Procesos de Soporte ITIL 4',
+    titulo: 'Modelado de Procesos de Soporte ITIL v3',
     responsable: 'Molina Vera, Marcelo Samuel (UNTELS)',
     descripcion: 'Redactar y diagramar de manera formal la documentación del nuevo subproceso PS05.03 de Gestión de Incidencias, determinando entradas, salidas, controles y flujogramas normativos.',
-    recursos: 'Manual de Operaciones HEVES (MOP 2016), Marco de Referencia ITIL 4, Software Bizagi Modeler.',
+    recursos: 'Manual de Operaciones HEVES (MOP 2016), Marco de Referencia ITIL v3, Software Bizagi Modeler.',
     criterios: 'La ficha del proceso debe alinearse al 100% con los lineamientos de Gestión por Procesos en Salud dictados por la RS N° 063-2020-MINSA y contar con el visto bueno de la Jefa de la UTI.',
   },
   {
@@ -41,7 +42,7 @@ const dictItems = [
     responsable: 'Roncal Saravia, Jorge Rafael (UNTELS)',
     descripcion: 'Configurar de manera lógica el motor de reglas de GLPI para automatizar los tiempos objetivos de resolución (SLA) vinculados a la criticidad del servicio de salud afectado.',
     recursos: 'Servidor Sandbox con Ubuntu Server, Base de datos MariaDB, Matriz de criticidad clínica.',
-    criterios: 'Verificación de alarmas visuales y sonoras en la UTI automáticas cuando un ticket es autodeclarado como "Alta Crítica" (Áreas de Emergencia o UCI), forzando un SLA de atención estricto menor a 15 minutos.',
+    criterios: 'Verificación de alarmas visuales y sonoras en la UTI automáticas cuando un ticket es autodeclarado como "Alta Crítica" (Áreas de Emergencia o UCI), forzando un SLA institucional acordado menor a 15 minutos.',
   },
   {
     code: '3.3',
@@ -99,36 +100,7 @@ export default function CrearEdtSalidasPage() {
                 Estructura de Desglose del Trabajo (EDT / WBS)
               </h4>
 
-              <div className="overflow-x-auto rounded-lg border border-border">
-                <table className="w-full text-sm border-collapse">
-                  <thead>
-                    <tr className="bg-gray-800 text-white">
-                      <th className="text-left p-3 border border-border w-28">Código EDT</th>
-                      <th className="text-left p-3 border border-border">Elemento / Paquete de Trabajo</th>
-                      <th className="text-left p-3 border border-border">Entregable Asociado (PMBOK)</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {wbsRows.map((row) =>
-                      row.level === 1 ? (
-                        <tr key={row.code} className="bg-muted/70">
-                          <td className="p-3 border border-border font-bold text-foreground">{row.code}</td>
-                          <td className="p-3 border border-border font-bold text-foreground uppercase tracking-wide text-xs">
-                            {row.label}
-                          </td>
-                          <td className="p-3 border border-border text-muted-foreground text-xs">{row.entregable}</td>
-                        </tr>
-                      ) : (
-                        <tr key={row.code} className="bg-card hover:bg-muted/30 transition-colors">
-                          <td className="p-3 border border-border text-orange-600 font-semibold pl-6">{row.code}</td>
-                          <td className="p-3 border border-border text-muted-foreground pl-8">{row.label}</td>
-                          <td className="p-3 border border-border text-muted-foreground text-xs">{row.entregable}</td>
-                        </tr>
-                      )
-                    )}
-                  </tbody>
-                </table>
-              </div>
+              <EdtDiagram rows={wbsRows} projectTitle="Proyecto ITSM HEVES" />
             </div>
 
             {/* Diccionario de la EDT */}

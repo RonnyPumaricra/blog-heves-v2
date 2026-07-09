@@ -218,7 +218,7 @@ export default function DtPrototiparPage() {
                             ? 'bg-red-50 text-red-700 border-red-200'
                             : 'bg-orange-50 text-orange-700 border-orange-200'
                         }`}>
-                          ⏱️ SLA ITIL 4 Normativo: Atención {priority === 'Alta' ? '< 15 minutos' : '< 2 horas'} asignada.
+                          ⏱️ SLA institucional HEVES: Atención {priority === 'Alta' ? '< 15 minutos' : '< 2 horas'} asignada.
                         </div>
 
                         <label className="block text-[11.5px] font-semibold text-slate-600 mb-1">

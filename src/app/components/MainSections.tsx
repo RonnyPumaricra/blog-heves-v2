@@ -13,8 +13,8 @@ export function InicioSection() {
               Mejora de la Gestión de Servicios Informáticos del HEVES
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              Implementación de procesos ITIL 4 para la gestión de incidentes y cambios,
-              gestionado bajo el marco PMBOK 6ta Edición
+              Implementación del proceso de Gestión de Incidencias de ITIL v3,
+              gestionado como proyecto bajo el marco PMBOK 6.ª Edición
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="bg-blue-600 text-white px-8 py-4 rounded-lg text-center">
@@ -26,7 +26,7 @@ export function InicioSection() {
                 <div className="text-sm">Meses de Duración</div>
               </div>
               <div className="bg-blue-600 text-white px-8 py-4 rounded-lg text-center">
-                <div className="text-3xl font-bold">ITIL 4</div>
+                <div className="text-3xl font-bold">ITIL v3</div>
                 <div className="text-sm">Buenas Prácticas</div>
               </div>
             </div>
@@ -73,7 +73,7 @@ export function InicioSection() {
             <h3 className="text-xl font-bold text-card-foreground mb-3">Período</h3>
             <p className="text-muted-foreground">
               Septiembre - Diciembre 2026<br />
-              Implementación de procesos ITIL 4 en la Unidad de TI
+              Implementación de procesos ITIL v3 en la Unidad de TI
             </p>
           </div>
         </div>

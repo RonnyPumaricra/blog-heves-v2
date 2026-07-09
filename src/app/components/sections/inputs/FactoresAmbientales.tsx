@@ -151,9 +151,9 @@ export function EntradaFactoresAmbientalesHEVES({idx}: {idx: number}) {
                 <td className="p-3 border border-border">Es la base legal del Mapa de Procesos del HEVES (2024). El diseño de los procesos ITIL (TO-BE) debe alinearse con esta normativa para ser institucionalizable.</td>
               </tr>
               <tr className="bg-card">
-                <td className="p-3 border border-border font-semibold">ITIL 4 — Axelos (2019)</td>
+                <td className="p-3 border border-border font-semibold">ITIL v3 — Axelos (2019)</td>
                 <td className="p-3 border border-border">Marco de buenas prácticas para la gestión de servicios de TI. Define las prácticas de gestión de incidentes, solicitudes, cambios y problemas.</td>
-                <td className="p-3 border border-border">Marco principal del diseño TO-BE. El proceso PS05 del HEVES actualmente no incluye gestión de incidentes ni de cambios, vacío que ITIL 4 cubre directamente.</td>
+                <td className="p-3 border border-border">Marco principal del diseño TO-BE. El proceso PS05 del HEVES actualmente no incluye gestión de incidentes ni de cambios, vacío que ITIL v3 cubre directamente.</td>
               </tr>
               <tr className="bg-muted/50">
                 <td className="p-3 border border-border font-semibold">PMBOK 6.ª Ed. — PMI (2017)</td>

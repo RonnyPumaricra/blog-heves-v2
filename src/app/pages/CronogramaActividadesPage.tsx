@@ -78,7 +78,7 @@ const actividades: Actividad[] = [
   {
     id: 'A7',
     nombre: 'Capacitación Operativa a la UTI',
-    descripcion: 'Ejecución de talleres sobre los estándares ITIL 4 y el uso administrativo de la plataforma GLPI para la Jefatura de TI y el equipo de soporte.',
+    descripcion: 'Ejecución de talleres sobre los estándares ITIL v3 y el uso administrativo de la plataforma GLPI para la Jefatura de TI y el equipo de soporte.',
     responsable: 'Equipo UNTELS',
     color: 'green',
     edt: '4.2 Formación Estándares',
@@ -87,7 +87,7 @@ const actividades: Actividad[] = [
   {
     id: 'A8',
     nombre: 'Despliegue del Piloto Funcional',
-    descripcion: 'Pase a producción del entorno controlado en la UTI para empezar a recibir incidencias reales, formalizado mediante el Acta de Conformidad Operativa.',
+    descripcion: 'Pase a producción del entorno controlado en la UTI para empezar a recibir incidencias reales, formalizado mediante el Acta de Conformidad Operativa. Con este hito se cierra el proyecto (PMBOK) y el proceso de Gestión de Incidencias transiciona a la fase de Operación del Servicio bajo el ciclo de vida de ITIL v3.',
     responsable: 'Dirección HEVES / UTI',
     color: 'purple',
     edt: '3.0 Sistema Piloto',

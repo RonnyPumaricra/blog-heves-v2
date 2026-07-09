@@ -68,7 +68,7 @@ export default function ActaSalidasPage() {
             </p>
             <div className="mt-4 bg-purple-50 dark:bg-purple-950/30 dark:border-purple-400/30 border border-purple-200 rounded-lg p-4">
               <p className="text-sm text-purple-800 dark:text-purple-200">
-                <strong>Objetivo Principal:</strong> Diseñar y documentar un subproceso de gestión de incidencias basado en el marco de trabajo ITIL 4, para estandarizar la atención tecnológica en el hospital.
+                <strong>Objetivo Principal:</strong> Diseñar y documentar un subproceso de gestión de incidencias basado en el marco de trabajo ITIL v3, para estandarizar la atención tecnológica en el hospital.
               </p>
             </div>
           </div>
@@ -84,7 +84,7 @@ export default function ActaSalidasPage() {
                 <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={18} />
                 <div>
                   <p className="text-muted-foreground">
-                    Diseñar e implementar el subproceso <strong>PS05.03 (Gestión de Incidentes de TI)</strong> bajo el marco ITIL 4 en el HEVES, alineado al Mapa de Procesos 2024.
+                    Diseñar e implementar el subproceso <strong>PS05.03 (Gestión de Incidentes de TI)</strong> bajo el marco ITIL v3 en el HEVES, alineado al Mapa de Procesos 2024.
                   </p>
                 </div>
               </div>
@@ -148,7 +148,7 @@ export default function ActaSalidasPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-0.5">•</span>
-                    <span>Diseño del proceso TO-BE de Gestión de Incidentes basado en ITIL 4.</span>
+                    <span>Diseño del proceso TO-BE de Gestión de Incidentes basado en ITIL v3.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-0.5">•</span>

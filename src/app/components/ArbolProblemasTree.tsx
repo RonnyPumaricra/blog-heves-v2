@@ -21,7 +21,7 @@ const nodes: TreeNode[] = [
   { id: 'PC', title: 'PROBLEMA CENTRAL', desc: 'Ausencia de un proceso formal de gestión de incidencias de servicios TI en el Hospital de Emergencias de Villa El Salvador (HEVES), generando inestabilidad operativa y falta de trazabilidad ante fallos tecnológicos en áreas críticas.', row: 3, level: 'problema-central' },
   { id: 'CD1', title: 'Causa Directa 1', desc: 'El proceso PS05 del HEVES no contempla subprocesos formales de gestión de incidentes ni de cambios (solo PS05.01 y PS05.02).', row: 4, level: 'causa-directa' },
   { id: 'CD2', title: 'Causa Directa 2', desc: 'Inexistencia de una herramienta tecnológica para el registro, clasificación y seguimiento de incidentes TI en el HEVES.', row: 4, level: 'causa-directa' },
-  { id: 'CD3', title: 'Causa Directa 3', desc: 'Personal de la UTI sin capacitación formal en marcos de gestión de servicios TI (ITIL 4) ni en protocolos de respuesta ante incidentes.', row: 4, level: 'causa-directa' },
+  { id: 'CD3', title: 'Causa Directa 3', desc: 'Personal de la UTI sin capacitación formal en marcos de gestión de servicios TI (ITIL v3) ni en protocolos de respuesta ante incidentes.', row: 4, level: 'causa-directa' },
   { id: 'CI11', title: 'C.I. 1.1', desc: 'El Mapa de Procesos HEVES 2024 aprobado no incluyó la gestión de incidentes como proceso requerido.', row: 5, level: 'causa-indirecta' },
   { id: 'CI12', title: 'C.I. 1.2', desc: 'Gobernanza TI centralizada sin iniciativas de mejora continua de procesos de soporte.', row: 5, level: 'causa-indirecta' },
   { id: 'CI21', title: 'C.I. 2.1', desc: 'Presupuesto TI limitado destinado exclusivamente a mantenimiento de sistemas existentes.', row: 5, level: 'causa-indirecta' },

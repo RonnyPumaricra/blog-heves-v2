@@ -29,7 +29,7 @@ export default function AnalisisAlt1Section() {
         <div>
           <span className="text-xs font-bold text-sky-600 uppercase tracking-widest">Evaluación de Solución Recomendada</span>
           <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mt-1">
-            Alternativa 1: GLPI On-Premise + ITIL 4 &amp; PMBOK v6
+            Alternativa 1: GLPI On-Premise + ITIL v3 &amp; PMBOK v6
           </h2>
           <p className="text-sm text-muted-foreground mt-1">Mesa de servicios soberana local para el proceso PS05 de TI del hospital.</p>
         </div>
@@ -44,7 +44,7 @@ export default function AnalisisAlt1Section() {
         {[
           { label: 'Inversión Licencias', value: 'S/. 0.00',    sub: 'Código abierto (GPL v3)',  subColor: 'text-emerald-600 dark:text-emerald-400' },
           { label: 'Soberanía de Datos',  value: '100% Local',  sub: 'Protección Ley N° 29733', subColor: 'text-emerald-600 dark:text-emerald-400' },
-          { label: 'Marco de Procesos',   value: 'ITIL 4 Base', sub: 'Subproceso PS05.03',       subColor: 'text-muted-foreground' },
+          { label: 'Marco de Procesos',   value: 'ITIL v3 Base', sub: 'Subproceso PS05.03',       subColor: 'text-muted-foreground' },
           { label: 'Implementación',      value: 'Predictivo',  sub: 'PMBOK v6 — 10 Semanas',   subColor: 'text-muted-foreground' },
         ].map(c => (
           <div key={c.label} className="bg-card border border-border p-5 rounded-2xl">
